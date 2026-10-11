@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#091817"/>
+      <stop offset="100%" stop-color="#050807"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="480" rx="16" fill="url(#bgGrad3)"/>
+  <rect width="798" height="478" x="1" y="1" rx="15" fill="none" stroke="#182E29" stroke-width="2"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="800" height="52" rx="16" fill="#0E211E"/>
+  <circle cx="30" cy="26" r="6" fill="#EF4444" opacity="0.8"/>
+  <circle cx="48" cy="26" r="6" fill="#F59E0B" opacity="0.8"/>
+  <circle cx="66" cy="26" r="6" fill="#10B981" opacity="0.8"/>
+  <text x="96" y="31" fill="#F1F5F4" font-family="system-ui, sans-serif" font-weight="700" font-size="14">ASIANROADWAYS &bull; Transport Management &amp; POD Tracking</text>
+  <rect x="625" y="14" width="145" height="24" rx="12" fill="#0EA5E9" fill-opacity="0.2" stroke="#0EA5E9" stroke-width="1"/>
+  <circle cx="637" cy="26" r="4" fill="#38BDF8"/>
+  <text x="649" y="31" fill="#38BDF8" font-family="monospace" font-size="11" font-weight="600">POD Pipeline: Active</text>
+
+  <!-- Metrics -->
+  <g transform="translate(30, 72)">
+    <rect width="165" height="74" rx="10" fill="#102723" stroke="#1B3D36" stroke-width="1"/>
+    <text x="16" y="28" fill="#9EADA9" font-family="system-ui" font-size="11">AWB MANAGEMENT</text>
+    <text x="16" y="55" fill="#38BDF8" font-family="system-ui" font-weight="800" font-size="20">Batch Labels</text>
+
+    <rect x="185" width="165" height="74" rx="10" fill="#102723" stroke="#1B3D36" stroke-width="1"/>
+    <text x="201" y="28" fill="#9EADA9" font-family="system-ui" font-size="11">DISPATCH SCHEDULING</text>
+    <text x="201" y="55" fill="#2DD4BF" font-family="system-ui" font-weight="800" font-size="20">Route Optimize</text>
+
+    <rect x="370" width="165" height="74" rx="10" fill="#102723" stroke="#1B3D36" stroke-width="1"/>
+    <text x="386" y="28" fill="#9EADA9" font-family="system-ui" font-size="11">POD SCAN PIPELINE</text>
+    <text x="386" y="55" fill="#F1F5F4" font-family="system-ui" font-weight="800" font-size="20">Digital Upload</text>
+
+    <rect x="555" width="185" height="74" rx="10" fill="#102723" stroke="#1B3D36" stroke-width="1"/>
+    <text x="571" y="28" fill="#9EADA9" font-family="system-ui" font-size="11">DELIVERY RUN SHEET</text>
+    <text x="571" y="55" fill="#14B8A6" font-family="monospace" font-weight="700" font-size="16">Automated DRS</text>
+  </g>
+
+  <!-- Main Left: Consignment & Dispatch Monitor -->
+  <g transform="translate(30, 166)">
+    <rect width="460" height="280" rx="12" fill="#0C1D1A" stroke="#18362F" stroke-width="1"/>
+    <text x="24" y="36" fill="#F1F5F4" font-family="system-ui" font-weight="700" font-size="15">Consignment Booking &amp; Proof of Delivery (POD)</text>
+
+    <g transform="translate(24, 60)">
+      <!-- AWB Card 1 -->
+      <rect width="412" height="60" rx="8" fill="#112722" stroke="#1A3E36" stroke-width="1"/>
+      <rect x="12" y="12" width="36" height="36" rx="6" fill="#0284C7" fill-opacity="0.2"/>
+      <path d="M22 30h16M22 24h10" stroke="#38BDF8" stroke-width="2" stroke-linecap="round"/>
+      <text x="60" y="28" fill="#F1F5F4" font-family="monospace" font-size="12" font-weight="700">AR-WB-2026-7841</text>
+      <text x="60" y="44" fill="#9EADA9" font-family="system-ui" font-size="11">Delhi &rarr; Jaipur &bull; Vehicle: DL-1GC-4482</text>
+      <rect x="315" y="18" width="85" height="24" rx="12" fill="#10B981" fill-opacity="0.2"/>
+      <text x="325" y="34" fill="#34D399" font-family="system-ui" font-size="10" font-weight="700">POD UPLOADED</text>
+
+      <!-- AWB Card 2 -->
+      <g transform="translate(0, 72)">
+        <rect width="412" height="60" rx="8" fill="#112722" stroke="#1A3E36" stroke-width="1"/>
+        <rect x="12" y="12" width="36" height="36" rx="6" fill="#0284C7" fill-opacity="0.2"/>
+        <path d="M22 30h16M22 24h10" stroke="#38BDF8" stroke-width="2" stroke-linecap="round"/>
+        <text x="60" y="28" fill="#F1F5F4" font-family="monospace" font-size="12" font-weight="700">AR-WB-2026-7842</text>
+        <text x="60" y="44" fill="#9EADA9" font-family="system-ui" font-size="11">Delhi &rarr; Ahmedabad &bull; Vehicle: HR-55B-9011</text>
+        <rect x="315" y="18" width="85" height="24" rx="12" fill="#0284C7" fill-opacity="0.2"/>
+        <text x="325" y="34" fill="#38BDF8" font-family="system-ui" font-size="10" font-weight="700">IN TRANSIT</text>
+      </g>
+
+      <!-- AWB Card 3 -->
+      <g transform="translate(0, 144)">
+        <rect width="412" height="60" rx="8" fill="#112722" stroke="#1A3E36" stroke-width="1"/>
+        <rect x="12" y="12" width="36" height="36" rx="6" fill="#0284C7" fill-opacity="0.2"/>
+        <path d="M22 30h16M22 24h10" stroke="#38BDF8" stroke-width="2" stroke-linecap="round"/>
+        <text x="60" y="28" fill="#F1F5F4" font-family="monospace" font-size="12" font-weight="700">AR-WB-2026-7843</text>
+        <text x="60" y="44" fill="#9EADA9" font-family="system-ui" font-size="11">Kolkata &rarr; Patna &bull; Manifest: MNF-091</text>
+        <rect x="315" y="18" width="85" height="24" rx="12" fill="#F59E0B" fill-opacity="0.2"/>
+        <text x="327" y="34" fill="#FBBF24" font-family="system-ui" font-size="10" font-weight="700">DISPATCHING</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Right: Architecture -->
+  <g transform="translate(510, 166)">
+    <rect width="260" height="280" rx="12" fill="#0C1D1A" stroke="#18362F" stroke-width="1"/>
+    <text x="20" y="36" fill="#F1F5F4" font-family="system-ui" font-weight="700" font-size="15">Workflow Systems</text>
+
+    <g transform="translate(20, 60)">
+      <circle cx="10" cy="10" r="4" fill="#38BDF8"/>
+      <text x="24" y="14" fill="#F1F5F4" font-family="system-ui" font-size="12" font-weight="600">Air Waybill (AWB) Generator</text>
+      <text x="24" y="30" fill="#9EADA9" font-family="system-ui" font-size="11">Automated thermal barcode labels</text>
+    </g>
+
+    <g transform="translate(20, 110)">
+      <circle cx="10" cy="10" r="4" fill="#38BDF8"/>
+      <text x="24" y="14" fill="#F1F5F4" font-family="system-ui" font-size="12" font-weight="600">DRS Sheet Dispatch</text>
+      <text x="24" y="30" fill="#9EADA9" font-family="system-ui" font-size="11">Driver assignment &amp; run-sheet print</text>
+    </g>
+
+    <g transform="translate(20, 160)">
+      <circle cx="10" cy="10" r="4" fill="#38BDF8"/>
+      <text x="24" y="14" fill="#F1F5F4" font-family="system-ui" font-size="12" font-weight="600">Signed POD Scan Storage</text>
+      <text x="24" y="30" fill="#9EADA9" font-family="system-ui" font-size="11">Client-facing delivery verification</text>
+    </g>
+
+    <g transform="translate(20, 210)">
+      <circle cx="10" cy="10" r="4" fill="#38BDF8"/>
+      <text x="24" y="14" fill="#F1F5F4" font-family="system-ui" font-size="12" font-weight="600">ASP.NET MVC &amp; Web Forms</text>
+      <text x="24" y="30" fill="#9EADA9" font-family="system-ui" font-size="11">High-reliability legacy bridging</text>
+    </g>
+  </g>
+</svg>

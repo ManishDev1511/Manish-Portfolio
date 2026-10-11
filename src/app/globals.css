@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #050807;
+  --bg-surface: #0E1715;
+  --bg-surface-elevated: #132320;
+  --teal-primary: #14B8A6;
+  --teal-light: #2DD4BF;
+  --teal-dark: #0F766E;
+  --border-subtle: #182E29;
+  --border-highlight: #245249;
+  --text-main: #F1F5F4;
+  --text-muted: #9EADA9;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #050807;
+  color: #F1F5F4;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050807;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #182E29;
+  border-radius: 5px;
+  border: 2px solid #050807;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #14B8A6;
+}
+
+/* Glassmorphism utility classes */
+.glass-panel {
+  background: rgba(14, 23, 21, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(24, 46, 41, 0.8);
+}
+
+.glass-panel-elevated {
+  background: rgba(19, 35, 32, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(45, 212, 191, 0.2);
+}
+
+.glass-pill {
+  background: rgba(20, 184, 166, 0.08);
+  border: 1px solid rgba(45, 212, 191, 0.25);
+  backdrop-filter: blur(8px);
+}
+
+.teal-gradient-text {
+  background: linear-gradient(135deg, #F1F5F4 0%, #2DD4BF 60%, #14B8A6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.teal-glow {
+  box-shadow: 0 0 40px -10px rgba(20, 184, 166, 0.25);
+}
+
+.teal-glow-hover:hover {
+  box-shadow: 0 0 35px -5px rgba(45, 212, 191, 0.35);
+}
+
+/* Subtle background grid pattern */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(24, 46, 41, 0.3) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(24, 46, 41, 0.3) 1px, transparent 1px);
+}
+
+/* Subtle dot pattern */
+.bg-dot-pattern {
+  background-image: radial-gradient(rgba(45, 212, 191, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Accessible focus outlines */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #2DD4BF;
+  outline-offset: 2px;
+}

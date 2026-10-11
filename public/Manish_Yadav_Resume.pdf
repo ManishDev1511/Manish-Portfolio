@@ -1,0 +1,145 @@
+%PDF-1.4
+%????
+1 0 obj
+<<
+  /Type /Catalog
+  /Pages 2 0 R
+>>
+endobj
+2 0 obj
+<<
+  /Type /Pages
+  /Kids [3 0 R]
+  /Count 1
+>>
+endobj
+3 0 obj
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [0 0 595.28 841.89]
+  /Contents 4 0 R
+  /Resources <<
+    /Font <<
+      /F1 5 0 R
+      /F2 6 0 R
+      /F3 7 0 R
+    >>
+  >>
+>>
+endobj
+4 0 obj
+<< /Length 6560 >>
+stream
+BT /F2 18 Tf 210 798 Td (MANISH YADAV) Tj ET
+BT /F2 8.5 Tf 95 783 Td (.NET DEVELOPER  |  C#  |  ASP.NET MVC  |  WEB API  |  SQL SERVER) Tj ET
+BT /F1 8.5 Tf 105 770 Td (+91 9451607870   |   manish.sp2060@gmail.com   |   linkedin.com/in/mr-dev123) Tj ET
+q 0.75 w 0.2 0.2 0.2 RG 40 762 m 555 762 l S Q
+BT /F2 9.5 Tf 40 749 Td (PROFESSIONAL SUMMARY) Tj ET
+q 0.5 w 0.5 0.5 0.5 RG 40 745 m 555 745 l S Q
+BT /F1 8 Tf 10.5 TL 40 734 Td
+(.NET Developer with 3+ years of hands-on experience developing and supporting web-based applications across courier,) Tj T*
+(logistics, and ERP domains. Skilled in C#, ASP.NET MVC, ASP.NET Web API, ADO.NET, SQL Server, RESTful API) Tj T*
+(development and integration, and jQuery. Contributed to business features covering shipment booking and tracking, dispatch,) Tj T*
+(billing, invoicing, accounting, POD, reporting, eWay Bill, and IRN workflows. Experienced in SQL queries and stored) Tj T*
+(procedures, application troubleshooting, and maintaining web applications using established coding practices.) Tj ET
+BT /F2 9.5 Tf 40 679 Td (TECHNICAL SKILLS) Tj ET
+q 0.5 w 0.5 0.5 0.5 RG 40 675 m 555 675 l S Q
+BT /F2 8 Tf 40 664 Td (Programming: ) Tj /F1 8 Tf (C#) Tj ET
+BT /F2 8 Tf 40 653 Td (Frameworks & Data Access: ) Tj /F1 8 Tf (ASP.NET MVC, ASP.NET Web API, ASP.NET Web Forms, ADO.NET) Tj ET
+BT /F2 8 Tf 40 642 Td (Database: ) Tj /F1 8 Tf (Microsoft SQL Server, MySQL, SQL queries, stored procedures, query optimization) Tj ET
+BT /F2 8 Tf 40 631 Td (API Development: ) Tj /F1 8 Tf (RESTful APIs, third-party API integration, API consumption) Tj ET
+BT /F2 8 Tf 40 620 Td (Frontend: ) Tj /F1 8 Tf (HTML, CSS, Bootstrap, JavaScript, jQuery, React.js \(basic knowledge; currently learning\)) Tj ET
+BT /F2 8 Tf 40 609 Td (Tools & Practices: ) Tj /F1 8 Tf (Visual Studio, Postman, SVN, OOP, SDLC, debugging, troubleshooting, coding standards) Tj ET
+BT /F2 9.5 Tf 40 594 Td (WORK EXPERIENCE) Tj ET
+q 0.5 w 0.5 0.5 0.5 RG 40 590 m 555 590 l S Q
+BT /F2 8.5 Tf 40 579 Td (.NET Developer ) Tj /F1 8.5 Tf (| Sagar Informatic Pvt. Ltd. | March 2024 - Present) Tj ET
+BT /F1 7.8 Tf 10 TL 48 568 Td
+(\225 Develop and maintain web applications using C#, ASP.NET MVC, and SQL Server across presentation, business-logic, and) Tj T*
+  (data-access layers.) Tj T*
+(\225 Develop and integrate RESTful Web APIs for application workflows, including API services consumed by Android) Tj T*
+  (applications.) Tj T*
+(\225 Write and maintain SQL queries and stored procedures supporting shipment operations, business rules, and operational reports.) Tj T*
+(\225 Implement and support logistics modules for booking, shipment tracking, dispatch, billing, invoicing, and reporting.) Tj T*
+(\225 Investigate and resolve issues across application and database layers; follow SDLC practices and established coding standards.) Tj ET
+BT /F2 9.5 Tf 40 488 Td (SELECTED PROJECTS) Tj ET
+q 0.5 w 0.5 0.5 0.5 RG 40 484 m 555 484 l S Q
+BT /F2 8.5 Tf 40 473 Td (Courier Mitra ) Tj /F1 8 Tf (| ASP.NET MVC, C#, Web API, SQL Server, jQuery) Tj ET
+BT /F3 7.5 Tf 40 463 Td (Courier and logistics management system for parcel booking, shipment tracking, and operational workflows.) Tj ET
+BT /F1 7.6 Tf 9.5 TL 48 453 Td
+(\225 Developed features for parcel booking, shipment tracking, rate calculation, delivery status, and branch management.) Tj T*
+(\225 Built REST APIs for Android applications to support shipment tracking and logistics updates.) Tj T*
+(\225 Worked on SQL queries and stored procedures for operational workflows and application performance.) Tj T*
+(\225 Developed user-interface screens using ASP.NET MVC, jQuery, HTML, and CSS.) Tj ET
+BT /F2 8.5 Tf 40 405 Td (Gracious Logistics ) Tj /F1 8 Tf (| ASP.NET MVC, ADO.NET, SQL Server, jQuery) Tj ET
+BT /F3 7.5 Tf 40 395 Td (Courier ERP and logistics management system spanning operations, finance, compliance, and administration.) Tj ET
+BT /F1 7.6 Tf 9.5 TL 48 385 Td
+(\225 Contributed to pickup and shipment processing, dashboards, master management, and operational reports.) Tj T*
+(\225 Worked on invoicing, accounting, COD management, user permissions, and Excel data-import workflows.) Tj T*
+(\225 Contributed to eWay Bill, IRN, billing, KYC verification, and channel order management modules.) Tj ET
+BT /F2 8.5 Tf 40 347 Td (AsianRoadways ) Tj /F1 8 Tf (| ASP.NET MVC, Web API, SQL Server, ASP.NET Web Forms) Tj ET
+BT /F3 7.5 Tf 40 337 Td (Web-based logistics application supporting shipment operations, tracking, and finance workflows.) Tj ET
+BT /F1 7.6 Tf 9.5 TL 48 327 Td
+(\225 Worked on shipment booking, AWB management, dispatch, delivery-status updates, and manifest generation.) Tj T*
+(\225 Contributed to POD scan upload and tracking, DRS management, invoice handling, accounting, and IRN workflows.) Tj T*
+(\225 Supported dashboard navigation, manifest printing, and client/forwarding-number updates.) Tj ET
+BT /F2 8.5 Tf 40 289 Td (YuantaiLogistics ) Tj /F1 8 Tf (| ASP.NET MVC, SQL Server, jQuery) Tj ET
+BT /F3 7.5 Tf 40 279 Td (Courier and logistics system supporting transportation, shipment operations, and related business processes.) Tj ET
+BT /F1 7.6 Tf 9.5 TL 48 269 Td
+(\225 Worked on pickup and shipment operations, client and vendor management, and user/dashboard workflows.) Tj T*
+(\225 Contributed to invoicing, accounting, reports, deviation reports, and complaint/query management.) Tj T*
+(\225 Worked on eWay Bill processing, trip-expense handling, and print/documentation management.) Tj ET
+BT /F2 9.5 Tf 40 231 Td (ADDITIONAL PROJECT EXPOSURE) Tj ET
+q 0.5 w 0.5 0.5 0.5 RG 40 227 m 555 227 l S Q
+BT /F1 7.6 Tf 9.5 TL 40 216 Td
+(Supported projects/modules: Art Express, BCM Supply Chain, Everest Logistics \(eWay Bill, IRN, billing and accounting\),) Tj T*
+(Kambson, Khimji Poonja, RE Logistics, Team Logistics, ULCC, Universal Express, ePortal \(React\), Decan Dart, 4A Express,) Tj T*
+(Unitrack, and Unitrack BKU \(University\).) Tj ET
+BT /F2 9.5 Tf 40 176 Td (EDUCATION) Tj ET
+q 0.5 w 0.5 0.5 0.5 RG 40 172 m 555 172 l S Q
+BT /F2 8 Tf 40 160 Td (Master of Computer Applications \(MCA\) ) Tj /F1 8 Tf (- Chandigarh University | Currently Pursuing) Tj ET
+BT /F2 8 Tf 40 148 Td (Diploma in Computer Science ) Tj /F1 8 Tf (- Jawaharlal Nehru Polytechnic, Mahmudabad, Sitapur | 2019) Tj ET
+BT /F2 8 Tf 40 136 Td (Senior Secondary \(Class XII\) ) Tj /F1 8 Tf (- BRIC Rampur Pokhrapar, Deoria | 2016) Tj ET
+BT /F1 8 Tf 40 120 Td (Languages: Hindi - Native/Bilingual | English - Limited Working Proficiency) Tj ET
+
+endstream
+endobj
+5 0 obj
+<<
+  /Type /Font
+  /Subtype /Type1
+  /BaseFont /Helvetica
+>>
+endobj
+6 0 obj
+<<
+  /Type /Font
+  /Subtype /Type1
+  /BaseFont /Helvetica-Bold
+>>
+endobj
+7 0 obj
+<<
+  /Type /Font
+  /Subtype /Type1
+  /BaseFont /Helvetica-Oblique
+>>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000017 00000 n 
+0000000073 00000 n 
+0000000139 00000 n 
+0000000332 00000 n 
+0000006948 00000 n 
+0000007027 00000 n 
+0000007111 00000 n 
+trailer
+<<
+  /Size 8
+  /Root 1 0 R
+>>
+startxref
+7198
+%%EOF

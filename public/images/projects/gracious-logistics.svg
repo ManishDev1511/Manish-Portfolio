@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#091714"/>
+      <stop offset="100%" stop-color="#050807"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="480" rx="16" fill="url(#bgGrad2)"/>
+  <rect width="798" height="478" x="1" y="1" rx="15" fill="none" stroke="#182E29" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="52" rx="16" fill="#0D1F1A"/>
+  <circle cx="30" cy="26" r="6" fill="#EF4444" opacity="0.8"/>
+  <circle cx="48" cy="26" r="6" fill="#F59E0B" opacity="0.8"/>
+  <circle cx="66" cy="26" r="6" fill="#10B981" opacity="0.8"/>
+  <text x="96" y="31" fill="#F1F5F4" font-family="system-ui, sans-serif" font-weight="700" font-size="14">GRACIOUS LOGISTICS &bull; Enterprise ERP, Invoicing &amp; Compliance</text>
+  <rect x="610" y="14" width="160" height="24" rx="12" fill="#10B981" fill-opacity="0.2" stroke="#10B981" stroke-width="1"/>
+  <circle cx="622" cy="26" r="4" fill="#34D399"/>
+  <text x="634" y="31" fill="#34D399" font-family="monospace" font-size="11" font-weight="600">NIC Portal: Verified</text>
+
+  <!-- Metrics Strip -->
+  <g transform="translate(30, 72)">
+    <rect width="165" height="74" rx="10" fill="#0F2822" stroke="#1B4238" stroke-width="1"/>
+    <text x="16" y="28" fill="#9EADA9" font-family="system-ui" font-size="11">GOVT eWay BILL</text>
+    <text x="16" y="55" fill="#34D399" font-family="system-ui" font-weight="800" font-size="20">API Synced</text>
+
+    <rect x="185" width="165" height="74" rx="10" fill="#0F2822" stroke="#1B4238" stroke-width="1"/>
+    <text x="201" y="28" fill="#9EADA9" font-family="system-ui" font-size="11">IRN GENERATION</text>
+    <text x="201" y="55" fill="#2DD4BF" font-family="system-ui" font-weight="800" font-size="20">E-Invoice Active</text>
+
+    <rect x="370" width="165" height="74" rx="10" fill="#0F2822" stroke="#1B4238" stroke-width="1"/>
+    <text x="386" y="28" fill="#9EADA9" font-family="system-ui" font-size="11">COD RECONCILIATION</text>
+    <text x="386" y="55" fill="#F1F5F4" font-family="system-ui" font-weight="800" font-size="20">Automated</text>
+
+    <rect x="555" width="185" height="74" rx="10" fill="#0F2822" stroke="#1B4238" stroke-width="1"/>
+    <text x="571" y="28" fill="#9EADA9" font-family="system-ui" font-size="11">DATA ACCESS LAYER</text>
+    <text x="571" y="55" fill="#14B8A6" font-family="monospace" font-weight="700" font-size="16">ADO.NET Bulk Ops</text>
+  </g>
+
+  <!-- Left: Invoicing & Compliance Ledger Mockup -->
+  <g transform="translate(30, 166)">
+    <rect width="470" height="280" rx="12" fill="#0C1F1A" stroke="#18362E" stroke-width="1"/>
+    <text x="24" y="36" fill="#F1F5F4" font-family="system-ui" font-weight="700" font-size="15">Commercial Invoicing &amp; GST Compliance Ledger</text>
+
+    <!-- Table header -->
+    <rect x="24" y="55" width="422" height="30" rx="6" fill="#142B24"/>
+    <text x="36" y="74" fill="#9EADA9" font-family="system-ui" font-size="11" font-weight="600">INVOICE #</text>
+    <text x="140" y="74" fill="#9EADA9" font-family="system-ui" font-size="11" font-weight="600">CLIENT ENTITY</text>
+    <text x="270" y="74" fill="#9EADA9" font-family="system-ui" font-size="11" font-weight="600">IRN HASH</text>
+    <text x="380" y="74" fill="#9EADA9" font-family="system-ui" font-size="11" font-weight="600">STATUS</text>
+
+    <!-- Table Row 1 -->
+    <rect x="24" y="93" width="422" height="46" rx="6" fill="#0F241F" stroke="#18362E" stroke-width="1"/>
+    <text x="36" y="120" fill="#2DD4BF" font-family="monospace" font-size="11" font-weight="700">INV-2026-0891</text>
+    <text x="140" y="120" fill="#F1F5F4" font-family="system-ui" font-size="11">Om Logistics Corp</text>
+    <text x="270" y="120" fill="#9EADA9" font-family="monospace" font-size="10">8a3f9e...421c</text>
+    <rect x="375" y="105" width="62" height="22" rx="11" fill="#10B981" fill-opacity="0.2"/>
+    <text x="387" y="119" fill="#34D399" font-family="system-ui" font-size="10" font-weight="700">VERIFIED</text>
+
+    <!-- Table Row 2 -->
+    <rect x="24" y="147" width="422" height="46" rx="6" fill="#0F241F" stroke="#18362E" stroke-width="1"/>
+    <text x="36" y="174" fill="#2DD4BF" font-family="monospace" font-size="11" font-weight="700">INV-2026-0892</text>
+    <text x="140" y="174" fill="#F1F5F4" font-family="system-ui" font-size="11">Apex Express Ltd</text>
+    <text x="270" y="174" fill="#9EADA9" font-family="monospace" font-size="10">e4b771...90da</text>
+    <rect x="375" y="159" width="62" height="22" rx="11" fill="#10B981" fill-opacity="0.2"/>
+    <text x="387" y="173" fill="#34D399" font-family="system-ui" font-size="10" font-weight="700">VERIFIED</text>
+
+    <!-- Table Row 3 -->
+    <rect x="24" y="201" width="422" height="46" rx="6" fill="#0F241F" stroke="#18362E" stroke-width="1"/>
+    <text x="36" y="228" fill="#2DD4BF" font-family="monospace" font-size="11" font-weight="700">INV-2026-0893</text>
+    <text x="140" y="228" fill="#F1F5F4" font-family="system-ui" font-size="11">Delhi Cargo Wings</text>
+    <text x="270" y="228" fill="#9EADA9" font-family="monospace" font-size="10">Generating...</text>
+    <rect x="375" y="213" width="62" height="22" rx="11" fill="#F59E0B" fill-opacity="0.2"/>
+    <text x="386" y="227" fill="#FBBF24" font-family="system-ui" font-size="10" font-weight="700">SYNCING</text>
+  </g>
+
+  <!-- Right: Capabilities -->
+  <g transform="translate(520, 166)">
+    <rect width="250" height="280" rx="12" fill="#0C1F1A" stroke="#18362E" stroke-width="1"/>
+    <text x="20" y="36" fill="#F1F5F4" font-family="system-ui" font-weight="700" font-size="15">ERP Capabilities</text>
+
+    <g transform="translate(20, 60)">
+      <circle cx="10" cy="10" r="4" fill="#2DD4BF"/>
+      <text x="24" y="14" fill="#F1F5F4" font-family="system-ui" font-size="12" font-weight="600">Bulk Excel Data Import</text>
+      <text x="24" y="30" fill="#9EADA9" font-family="system-ui" font-size="11">High-speed manifest ingestion</text>
+    </g>
+
+    <g transform="translate(20, 110)">
+      <circle cx="10" cy="10" r="4" fill="#2DD4BF"/>
+      <text x="24" y="14" fill="#F1F5F4" font-family="system-ui" font-size="12" font-weight="600">Role-Based Access (RBAC)</text>
+      <text x="24" y="30" fill="#9EADA9" font-family="system-ui" font-size="11">Manager, Accountant &amp; Dispatcher</text>
+    </g>
+
+    <g transform="translate(20, 160)">
+      <circle cx="10" cy="10" r="4" fill="#2DD4BF"/>
+      <text x="24" y="14" fill="#F1F5F4" font-family="system-ui" font-size="12" font-weight="600">KYC Verification APIs</text>
+      <text x="24" y="30" fill="#9EADA9" font-family="system-ui" font-size="11">GSTIN &amp; PAN live validation</text>
+    </g>
+
+    <g transform="translate(20, 210)">
+      <circle cx="10" cy="10" r="4" fill="#2DD4BF"/>
+      <text x="24" y="14" fill="#F1F5F4" font-family="system-ui" font-size="12" font-weight="600">Financial Reports</text>
+      <text x="24" y="30" fill="#9EADA9" font-family="system-ui" font-size="11">Automated day-end P&amp;L reconciliation</text>
+    </g>
+  </g>
+</svg>

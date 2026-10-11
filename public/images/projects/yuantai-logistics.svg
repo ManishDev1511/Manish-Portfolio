@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071916"/>
+      <stop offset="100%" stop-color="#050807"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="480" rx="16" fill="url(#bgGrad4)"/>
+  <rect width="798" height="478" x="1" y="1" rx="15" fill="none" stroke="#182E29" stroke-width="2"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="800" height="52" rx="16" fill="#0C201C"/>
+  <circle cx="30" cy="26" r="6" fill="#EF4444" opacity="0.8"/>
+  <circle cx="48" cy="26" r="6" fill="#F59E0B" opacity="0.8"/>
+  <circle cx="66" cy="26" r="6" fill="#10B981" opacity="0.8"/>
+  <text x="96" y="31" fill="#F1F5F4" font-family="system-ui, sans-serif" font-weight="700" font-size="14">YUANTAILOGISTICS &bull; Global Cargo Operations &amp; Portals</text>
+  <rect x="620" y="14" width="150" height="24" rx="12" fill="#8B5CF6" fill-opacity="0.2" stroke="#8B5CF6" stroke-width="1"/>
+  <circle cx="632" cy="26" r="4" fill="#A78BFA"/>
+  <text x="644" y="31" fill="#A78BFA" font-family="monospace" font-size="11" font-weight="600">Cross-Border: Live</text>
+
+  <!-- Metrics -->
+  <g transform="translate(30, 72)">
+    <rect width="165" height="74" rx="10" fill="#102723" stroke="#1B3D36" stroke-width="1"/>
+    <text x="16" y="28" fill="#9EADA9" font-family="system-ui" font-size="11">CLIENT/VENDOR PORTALS</text>
+    <text x="16" y="55" fill="#A78BFA" font-family="system-ui" font-weight="800" font-size="20">Self-Service</text>
+
+    <rect x="185" width="165" height="74" rx="10" fill="#102723" stroke="#1B3D36" stroke-width="1"/>
+    <text x="201" y="28" fill="#9EADA9" font-family="system-ui" font-size="11">DEVIATION AUDITS</text>
+    <text x="201" y="55" fill="#2DD4BF" font-family="system-ui" font-weight="800" font-size="20">Variance Track</text>
+
+    <rect x="370" width="165" height="74" rx="10" fill="#102723" stroke="#1B3D36" stroke-width="1"/>
+    <text x="386" y="28" fill="#9EADA9" font-family="system-ui" font-size="11">TRIP EXPENSES</text>
+    <text x="386" y="55" fill="#F1F5F4" font-family="system-ui" font-weight="800" font-size="20">Settlement</text>
+
+    <rect x="555" width="185" height="74" rx="10" fill="#102723" stroke="#1B3D36" stroke-width="1"/>
+    <text x="571" y="28" fill="#9EADA9" font-family="system-ui" font-size="11">PRINT DOCUMENTATION</text>
+    <text x="571" y="55" fill="#14B8A6" font-family="monospace" font-weight="700" font-size="16">Customs Reports</text>
+  </g>
+
+  <!-- Main Left: Global Cargo Lifecycle -->
+  <g transform="translate(30, 166)">
+    <rect width="460" height="280" rx="12" fill="#0B1C19" stroke="#17352E" stroke-width="1"/>
+    <text x="24" y="36" fill="#F1F5F4" font-family="system-ui" font-weight="700" font-size="15">Cross-Border Freight &amp; Complaint Management</text>
+
+    <g transform="translate(24, 60)">
+      <rect width="412" height="60" rx="8" fill="#112723" stroke="#1A3F36" stroke-width="1"/>
+      <text x="18" y="26" fill="#A78BFA" font-family="monospace" font-size="11" font-weight="700">CONTAINER: YT-INT-4491</text>
+      <text x="18" y="44" fill="#F1F5F4" font-family="system-ui" font-size="12">Port Nhava Sheva &rarr; Singapore Hub &bull; 40ft High Cube</text>
+      <rect x="325" y="18" width="75" height="24" rx="12" fill="#8B5CF6" fill-opacity="0.2"/>
+      <text x="336" y="34" fill="#C4B5FD" font-family="system-ui" font-size="10" font-weight="700">CLEARED</text>
+
+      <g transform="translate(0, 72)">
+        <rect width="412" height="60" rx="8" fill="#112723" stroke="#1A3F36" stroke-width="1"/>
+        <text x="18" y="26" fill="#A78BFA" font-family="monospace" font-size="11" font-weight="700">CONTAINER: YT-INT-4492</text>
+        <text x="18" y="44" fill="#F1F5F4" font-family="system-ui" font-size="12">Port Mundra &rarr; Dubai Jebel Ali &bull; Refrigerated Freight</text>
+        <rect x="325" y="18" width="75" height="24" rx="12" fill="#0284C7" fill-opacity="0.2"/>
+        <text x="338" y="34" fill="#38BDF8" font-family="system-ui" font-size="10" font-weight="700">SAILING</text>
+      </g>
+
+      <g transform="translate(0, 144)">
+        <rect width="412" height="60" rx="8" fill="#112723" stroke="#1A3F36" stroke-width="1"/>
+        <text x="18" y="26" fill="#A78BFA" font-family="monospace" font-size="11" font-weight="700">CUSTOMS AUDIT: YT-DEV-108</text>
+        <text x="18" y="44" fill="#F1F5F4" font-family="system-ui" font-size="12">Deviation Analysis: 0.2% Weight Variance &bull; Approved</text>
+        <rect x="325" y="18" width="75" height="24" rx="12" fill="#10B981" fill-opacity="0.2"/>
+        <text x="336" y="34" fill="#34D399" font-family="system-ui" font-size="10" font-weight="700">AUDITED</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Right: Architecture -->
+  <g transform="translate(510, 166)">
+    <rect width="260" height="280" rx="12" fill="#0B1C19" stroke="#17352E" stroke-width="1"/>
+    <text x="20" y="36" fill="#F1F5F4" font-family="system-ui" font-weight="700" font-size="15">System Architecture</text>
+
+    <g transform="translate(20, 60)">
+      <circle cx="10" cy="10" r="4" fill="#A78BFA"/>
+      <text x="24" y="14" fill="#F1F5F4" font-family="system-ui" font-size="12" font-weight="600">Client &amp; Vendor Portals</text>
+      <text x="24" y="30" fill="#9EADA9" font-family="system-ui" font-size="11">Secured role-based views</text>
+    </g>
+
+    <g transform="translate(20, 110)">
+      <circle cx="10" cy="10" r="4" fill="#A78BFA"/>
+      <text x="24" y="14" fill="#F1F5F4" font-family="system-ui" font-size="12" font-weight="600">Automated Ledger Accounting</text>
+      <text x="24" y="30" fill="#9EADA9" font-family="system-ui" font-size="11">Multi-currency invoice reconciliation</text>
+    </g>
+
+    <g transform="translate(20, 160)">
+      <circle cx="10" cy="10" r="4" fill="#A78BFA"/>
+      <text x="24" y="14" fill="#F1F5F4" font-family="system-ui" font-size="12" font-weight="600">Complaint &amp; Query Tracking</text>
+      <text x="24" y="30" fill="#9EADA9" font-family="system-ui" font-size="11">SLA escalation algorithms</text>
+    </g>
+
+    <g transform="translate(20, 210)">
+      <circle cx="10" cy="10" r="4" fill="#A78BFA"/>
+      <text x="24" y="14" fill="#F1F5F4" font-family="system-ui" font-size="12" font-weight="600">Batch Document Generation</text>
+      <text x="24" y="30" fill="#9EADA9" font-family="system-ui" font-size="11">Customs declarations &amp; manifests</text>
+    </g>
+  </g>
+</svg>

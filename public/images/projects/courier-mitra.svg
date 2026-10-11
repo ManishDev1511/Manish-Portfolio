@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#081412"/>
+      <stop offset="100%" stop-color="#050807"/>
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#14B8A6"/>
+      <stop offset="100%" stop-color="#2DD4BF"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="800" height="480" rx="16" fill="url(#bgGrad)"/>
+  <rect width="798" height="478" x="1" y="1" rx="15" fill="none" stroke="#182E29" stroke-width="2"/>
+
+  <!-- Top Navigation Header -->
+  <rect x="0" y="0" width="800" height="52" rx="16" fill="#0D1C19"/>
+  <circle cx="30" cy="26" r="6" fill="#EF4444" opacity="0.8"/>
+  <circle cx="48" cy="26" r="6" fill="#F59E0B" opacity="0.8"/>
+  <circle cx="66" cy="26" r="6" fill="#10B981" opacity="0.8"/>
+  <text x="96" y="31" fill="#F1F5F4" font-family="system-ui, sans-serif" font-weight="700" font-size="14">COURIER MITRA &bull; Operations &amp; Live Tracking Engine</text>
+  <rect x="620" y="14" width="150" height="24" rx="12" fill="#14B8A6" fill-opacity="0.2" stroke="#14B8A6" stroke-width="1"/>
+  <circle cx="632" cy="26" r="4" fill="#2DD4BF"/>
+  <text x="644" y="31" fill="#2DD4BF" font-family="monospace" font-size="11" font-weight="600">Android API: Online</text>
+
+  <!-- Metrics Strip -->
+  <g transform="translate(30, 72)">
+    <!-- Metric 1 -->
+    <rect width="165" height="74" rx="10" fill="#0F2420" stroke="#1B3832" stroke-width="1"/>
+    <text x="16" y="28" fill="#9EADA9" font-family="system-ui" font-size="11">PARCEL BOOKING</text>
+    <text x="16" y="55" fill="#2DD4BF" font-family="system-ui" font-weight="800" font-size="22">Active Sync</text>
+
+    <!-- Metric 2 -->
+    <rect x="185" width="165" height="74" rx="10" fill="#0F2420" stroke="#1B3832" stroke-width="1"/>
+    <text x="201" y="28" fill="#9EADA9" font-family="system-ui" font-size="11">RATE ENGINE</text>
+    <text x="201" y="55" fill="#F1F5F4" font-family="system-ui" font-weight="800" font-size="22">Dynamic Weight</text>
+
+    <!-- Metric 3 -->
+    <rect x="370" width="165" height="74" rx="10" fill="#0F2420" stroke="#1B3832" stroke-width="1"/>
+    <text x="386" y="28" fill="#9EADA9" font-family="system-ui" font-size="11">MULTI-BRANCH</text>
+    <text x="386" y="55" fill="#F1F5F4" font-family="system-ui" font-weight="800" font-size="22">Centralized DB</text>
+
+    <!-- Metric 4 -->
+    <rect x="555" width="185" height="74" rx="10" fill="#0F2420" stroke="#1B3832" stroke-width="1"/>
+    <text x="571" y="28" fill="#9EADA9" font-family="system-ui" font-size="11">SQL STORED PROCS</text>
+    <text x="571" y="55" fill="#14B8A6" font-family="monospace" font-weight="700" font-size="16">sp_DispatchAWB</text>
+  </g>
+
+  <!-- Main Panel: Live Tracking & Workflow Pipeline -->
+  <g transform="translate(30, 166)">
+    <rect width="450" height="280" rx="12" fill="#0C1B18" stroke="#182E29" stroke-width="1"/>
+    <text x="24" y="36" fill="#F1F5F4" font-family="system-ui" font-weight="700" font-size="15">Shipment Lifecycle Pipeline</text>
+    <text x="24" y="56" fill="#9EADA9" font-family="monospace" font-size="11">AWB: CM-DEL-984210 &bull; Mode: Air Cargo</text>
+
+    <!-- Timeline Steps -->
+    <g transform="translate(24, 85)">
+      <!-- Step 1 -->
+      <circle cx="16" cy="16" r="14" fill="#14B8A6" fill-opacity="0.2" stroke="#14B8A6" stroke-width="2"/>
+      <path d="M11 16l3 3 7-7" stroke="#2DD4BF" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <line x1="16" y1="34" x2="16" y2="60" stroke="#14B8A6" stroke-width="2" stroke-dasharray="3 3"/>
+      <text x="44" y="16" fill="#F1F5F4" font-family="system-ui" font-weight="600" font-size="13">Parcel Booked &amp; Weighed</text>
+      <text x="44" y="32" fill="#9EADA9" font-family="system-ui" font-size="11">Central Hub, New Delhi &bull; 10:15 AM</text>
+
+      <!-- Step 2 -->
+      <g transform="translate(0, 60)">
+        <circle cx="16" cy="16" r="14" fill="#14B8A6" fill-opacity="0.2" stroke="#14B8A6" stroke-width="2"/>
+        <path d="M11 16l3 3 7-7" stroke="#2DD4BF" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <line x1="16" y1="34" x2="16" y2="60" stroke="#14B8A6" stroke-width="2" stroke-dasharray="3 3"/>
+        <text x="44" y="16" fill="#F1F5F4" font-family="system-ui" font-weight="600" font-size="13">Manifest Generated &amp; Dispatched</text>
+        <text x="44" y="32" fill="#9EADA9" font-family="system-ui" font-size="11">Flight 6E-241 &bull; Transit Hub Mumbai &bull; 02:40 PM</text>
+      </g>
+
+      <!-- Step 3 -->
+      <g transform="translate(0, 120)">
+        <circle cx="16" cy="16" r="14" fill="#2DD4BF" fill-opacity="0.3" stroke="#2DD4BF" stroke-width="2"/>
+        <circle cx="16" cy="16" r="6" fill="#2DD4BF"/>
+        <text x="44" y="16" fill="#2DD4BF" font-family="system-ui" font-weight="700" font-size="13">Out for Delivery (Android App Sync)</text>
+        <text x="44" y="32" fill="#9EADA9" font-family="system-ui" font-size="11">Field Agent: Suresh K. &bull; Live GPS Beacon &bull; 05:10 PM</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Right Panel: Backend Architecture Stack -->
+  <g transform="translate(500, 166)">
+    <rect width="270" height="280" rx="12" fill="#0C1B18" stroke="#182E29" stroke-width="1"/>
+    <text x="20" y="36" fill="#F1F5F4" font-family="system-ui" font-weight="700" font-size="15">Architecture Stack</text>
+
+    <g transform="translate(20, 60)">
+      <rect width="230" height="42" rx="8" fill="#132823" stroke="#1E443B" stroke-width="1"/>
+      <text x="14" y="22" fill="#2DD4BF" font-family="monospace" font-size="11" font-weight="700">ASP.NET MVC 5 / C#</text>
+      <text x="14" y="35" fill="#9EADA9" font-family="system-ui" font-size="10">Presentation &amp; Controller Logic</text>
+    </g>
+
+    <g transform="translate(20, 112)">
+      <rect width="230" height="42" rx="8" fill="#132823" stroke="#1E443B" stroke-width="1"/>
+      <text x="14" y="22" fill="#2DD4BF" font-family="monospace" font-size="11" font-weight="700">ASP.NET Web API 2.0</text>
+      <text x="14" y="35" fill="#9EADA9" font-family="system-ui" font-size="10">JSON REST Endpoints for Mobile</text>
+    </g>
+
+    <g transform="translate(20, 164)">
+      <rect width="230" height="42" rx="8" fill="#132823" stroke="#1E443B" stroke-width="1"/>
+      <text x="14" y="22" fill="#2DD4BF" font-family="monospace" font-size="11" font-weight="700">Microsoft SQL Server</text>
+      <text x="14" y="35" fill="#9EADA9" font-family="system-ui" font-size="10">Stored Procs, Triggers &amp; Indexing</text>
+    </g>
+
+    <g transform="translate(20, 216)">
+      <rect width="230" height="42" rx="8" fill="#132823" stroke="#1E443B" stroke-width="1"/>
+      <text x="14" y="22" fill="#2DD4BF" font-family="monospace" font-size="11" font-weight="700">jQuery &amp; AJAX UI</text>
+      <text x="14" y="35" fill="#9EADA9" font-family="system-ui" font-size="10">Asynchronous Real-Time Updates</text>
+    </g>
+  </g>
+</svg>
