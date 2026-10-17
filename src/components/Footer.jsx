@@ -16,19 +16,20 @@ export default function Footer() {
       {/* Rainbow gradient accent line at very top of footer */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-teal-400 via-cyan-400 via-purple-400 to-amber-400 z-20" />
 
-      {/* Cyber Neon Wave Graphic Background uploaded by user */}
+      {/* Cyber Neon Wave Graphic Background in Ultra-Crisp 2560px HD */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
         <div className="relative w-full h-full">
           <Image
             src="/images/footer-bg.png"
             alt="Cyber Neon Footer Graphic"
             fill
-            sizes="100vw"
-            className="object-cover object-bottom opacity-70 sm:opacity-85"
-            priority={false}
+            unoptimized
+            quality={100}
+            priority
+            className="object-cover object-bottom opacity-90 sm:opacity-100 select-none"
           />
-          {/* Subtle gradient vignette to blend cleanly with top section and keep text crystal clear */}
-          <div className="absolute inset-0 bg-gradient-to-b from-theme-bg via-theme-bg/75 to-transparent" />
+          {/* Soft top gradient blend to transition smoothly from the Contact section */}
+          <div className="absolute top-0 left-0 right-0 h-28 bg-gradient-to-b from-theme-bg via-theme-bg/60 to-transparent pointer-events-none" />
         </div>
       </div>
 
@@ -54,7 +55,7 @@ export default function Footer() {
               Specialized in enterprise backend engineering, C#, ASP.NET MVC, Web API, and SQL Server for mission-critical logistics, courier networks, and ERP workflows.
             </p>
 
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-theme-surface/80 backdrop-blur-md border border-teal-500/30 text-xs text-theme-textSecondary font-mono shadow-sm">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-theme-surface/85 backdrop-blur-md border border-teal-500/30 text-xs text-theme-textSecondary font-mono shadow-sm">
               <ShieldCheck className="w-4 h-4 text-teal-400" />
               <span>Grounded in authentic 3+ years enterprise experience</span>
             </div>
