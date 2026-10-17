@@ -1,44 +1,34 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import Image from "next/image";
 import {
   Mail,
   Phone,
   Linkedin,
-  Github,
-  Send,
-  CheckCircle2,
-  AlertCircle,
+  Download,
   Copy,
   Check,
   ExternalLink,
   MessageCircle,
   Sparkles,
   MapPin,
-  Clock,
+  Cpu,
+  ShieldCheck,
+  Database,
+  Maximize2,
+  X,
+  Eye,
+  Server,
+  Layers,
 } from "lucide-react";
 import { portfolioData } from "@/data/portfolioData";
 import { MotionDiv } from "./MotionWrapper";
 
 export default function Contact() {
   const { personal } = portfolioData;
-
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-    website: "", // Honeypot
-  });
-
-  const [formLoadedAt, setFormLoadedAt] = useState(0);
   const [copiedEmail, setCopiedEmail] = useState(false);
-  const [submitting, setSubmitting] = useState(false);
-  const [status, setStatus] = useState(null);
-
-  useEffect(() => {
-    setFormLoadedAt(Date.now());
-  }, []);
+  const [isDiagramModalOpen, setIsDiagramModalOpen] = useState(false);
 
   const handleCopyEmail = async () => {
     try {
@@ -50,93 +40,29 @@ export default function Contact() {
     }
   };
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setSubmitting(true);
-    setStatus(null);
-
-    // Client-side quick checks
-    if (!formData.name.trim() || formData.name.trim().length < 2) {
-      setStatus({
-        type: "error",
-        message: "Please enter your name (at least 2 characters).",
-      });
-      setSubmitting(false);
-      return;
-    }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!formData.email.trim() || !emailRegex.test(formData.email.trim())) {
-      setStatus({
-        type: "error",
-        message: "Please enter a valid email address.",
-      });
-      setSubmitting(false);
-      return;
-    }
-
-    if (!formData.message.trim() || formData.message.trim().length < 10) {
-      setStatus({
-        type: "error",
-        message: "Message must contain at least 10 characters.",
-      });
-      setSubmitting(false);
-      return;
-    }
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...formData,
-          formLoadedAt,
-        }),
-      });
-
-      const result = await response.json();
-
-      if (response.ok && result.success) {
-        setStatus({
-          type: "success",
-          message:
-            result.message ||
-            "Your message has been received! Manish will review your inquiry shortly.",
-          simulated: result.simulated,
-          mailtoFallback: result.mailtoFallback,
-        });
-        setFormData({
-          name: "",
-          email: "",
-          subject: "",
-          message: "",
-          website: "",
-        });
-      } else {
-        setStatus({
-          type: "error",
-          message:
-            result.error ||
-            "Unable to submit message at this moment. Please use the direct email link below.",
-          mailtoFallback: result.mailtoFallback || personal.emailHref,
-        });
-      }
-    } catch {
-      setStatus({
-        type: "error",
-        message:
-          "Network error or service unavailable. Please contact Manish directly at manish.sp2060@gmail.com.",
-        mailtoFallback: personal.emailHref,
-      });
-    } finally {
-      setSubmitting(false);
-    }
-  };
+  const architecturePillars = [
+    {
+      icon: Layers,
+      title: "API & Business Services Layer",
+      desc: "Clean Architecture (DDD), ASP.NET Core Web API, JWT Authentication, Dependency Injection, and resilient business services.",
+      color: "text-cyan-300",
+      bg: "bg-cyan-500/15 border-cyan-500/30",
+    },
+    {
+      icon: Database,
+      title: "High-Throughput Data Persistence",
+      desc: "Microsoft SQL Server primary transactional database, optimized stored procedures, views, indexing, and ACID guarantees.",
+      color: "text-amber-300",
+      bg: "bg-amber-500/15 border-amber-500/30",
+    },
+    {
+      icon: ShieldCheck,
+      title: "Statutory Compliance & Cloud Gateways",
+      desc: "NIC Government eWay Bill API, GST IRN automated invoicing, Android mobile REST APIs, and third-party logistics integrations.",
+      color: "text-emerald-300",
+      bg: "bg-emerald-500/15 border-emerald-500/30",
+    },
+  ];
 
   return (
     <section id="contact" className="py-20 md:py-28 relative bg-theme-bg overflow-hidden">
@@ -150,7 +76,7 @@ export default function Contact() {
           <MotionDiv>
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-emerald-500/15 via-teal-500/15 to-cyan-500/15 border border-emerald-500/30 text-emerald-300 text-xs font-mono font-bold mb-3 shadow-sm shadow-emerald-500/10">
               <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
-              <span>GET IN TOUCH</span>
+              <span>GET IN TOUCH &amp; ARCHITECTURE VISION</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
               Connect With{" "}
@@ -164,7 +90,7 @@ export default function Contact() {
           </MotionDiv>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
           {/* Left Column: Colorful Direct Contacts */}
           <div className="lg:col-span-5 flex flex-col gap-4">
             {/* Phone & WhatsApp Card */}
@@ -284,147 +210,183 @@ export default function Contact() {
             </MotionDiv>
           </div>
 
-          {/* Right Column: Contact Form with Multi-Tone Accent */}
-          <div className="lg:col-span-7">
-            <MotionDiv delay={0.2}>
-              <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-b from-theme-surface to-theme-surfaceElevated border border-theme-border/80 shadow-2xl relative overflow-hidden">
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-teal-400 via-cyan-400 to-indigo-400" />
+          {/* Right Column: User Uploaded Architecture Vision Card */}
+          <div className="lg:col-span-7 flex">
+            <MotionDiv delay={0.2} className="w-full flex">
+              <div className="w-full p-6 sm:p-8 rounded-2xl bg-gradient-to-b from-theme-surface to-theme-surfaceElevated border border-teal-500/30 shadow-2xl relative overflow-hidden flex flex-col justify-between">
+                {/* Rainbow top line */}
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-teal-400 via-cyan-400 via-purple-400 to-amber-400" />
 
-                <div className="mb-6">
-                  <h3 className="text-xl sm:text-2xl font-black text-white">
-                    Send a Direct Message
+                <div>
+                  {/* Top Status & Philosophy Header */}
+                  <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-xs font-mono font-bold shadow-sm">
+                      <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                      <span>Future Ready &bull; Scalable &bull; Secure</span>
+                    </div>
+
+                    <span className="text-xs font-mono text-cyan-300 bg-cyan-500/10 px-2.5 py-1 rounded-md border border-cyan-500/20">
+                      Clean Architecture &bull; DDD
+                    </span>
+                  </div>
+
+                  {/* Career Vision Headline */}
+                  <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight mb-2">
+                    Enterprise .NET{" "}
+                    <span className="bg-gradient-to-r from-teal-300 via-cyan-300 to-indigo-300 bg-clip-text text-transparent">
+                      Architecture Vision
+                    </span>
                   </h3>
-                  <p className="text-xs sm:text-sm text-theme-textSecondary mt-1">
-                    Fill out the form below. Messages will be routed straight to Manish&apos;s verified inbox.
+
+                  {/* Inspiring Career Statement */}
+                  <p className="text-xs sm:text-sm text-theme-textSecondary leading-relaxed mb-5">
+                    Designing multi-tiered enterprise software combining modern ASP.NET Core Web APIs, Domain-Driven Design (DDD), high-performance Microsoft SQL Server data persistence, and resilient third-party integrations.
                   </p>
+
+                  {/* Visual Architecture Diagram with Interactive Zoom Trigger */}
+                  <div
+                    onClick={() => setIsDiagramModalOpen(true)}
+                    className="relative w-full h-56 sm:h-64 lg:h-72 rounded-xl overflow-hidden border border-teal-500/40 mb-6 bg-slate-950 shadow-2xl cursor-pointer group/diag"
+                    title="Click to view full architecture diagram"
+                  >
+                    <Image
+                      src="/images/enterprise-dotnet-architecture.png"
+                      alt="Enterprise .NET Architecture Vision Diagram"
+                      fill
+                      unoptimized
+                      priority
+                      className="object-contain p-1.5 transition-transform duration-500 group-hover/diag:scale-102"
+                    />
+
+                    {/* Hover Zoom Prompt */}
+                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/diag:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
+                      <div className="px-4 py-2 rounded-xl bg-theme-bg/95 border border-teal-400 text-teal-300 text-xs font-mono font-bold flex items-center gap-2 shadow-2xl">
+                        <Maximize2 className="w-4 h-4" />
+                        <span>Click to Enlarge Architecture Diagram</span>
+                      </div>
+                    </div>
+
+                    {/* Bottom-right Tag */}
+                    <div className="absolute bottom-2.5 right-3 bg-theme-bg/90 backdrop-blur-md px-2.5 py-1 rounded-md border border-teal-500/40 text-[10px] font-mono text-teal-300 font-bold pointer-events-none">
+                      ASP.NET Core &bull; SQL Server &bull; Web API
+                    </div>
+                  </div>
+
+                  {/* 3 Core Architecture Pillars */}
+                  <div className="space-y-2.5 mb-6">
+                    {architecturePillars.map((cp) => {
+                      const Icon = cp.icon;
+                      return (
+                        <div
+                          key={cp.title}
+                          className="p-3 rounded-xl bg-theme-bg/85 border border-theme-border/80 hover:border-teal-500/40 transition-colors flex items-start gap-3 group"
+                        >
+                          <div className={`p-2 rounded-lg border flex-shrink-0 transition-transform group-hover:scale-110 ${cp.bg} ${cp.color}`}>
+                            <Icon className="w-4 h-4" />
+                          </div>
+                          <div>
+                            <h4 className="text-xs sm:text-sm font-bold text-white mb-0.5">
+                              {cp.title}
+                            </h4>
+                            <p className="text-[11px] text-theme-textMuted leading-relaxed">
+                              {cp.desc}
+                            </p>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
 
-                {status && (
-                  <div
-                    className={`p-4 rounded-xl mb-6 text-xs sm:text-sm flex items-start gap-3 border ${
-                      status.type === "success"
-                        ? "bg-emerald-500/15 border-emerald-500/40 text-emerald-200"
-                        : "bg-rose-500/15 border-rose-500/40 text-rose-200"
-                    }`}
-                  >
-                    {status.type === "success" ? (
-                      <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
-                    ) : (
-                      <AlertCircle className="w-5 h-5 text-rose-400 flex-shrink-0 mt-0.5" />
-                    )}
-                    <div className="flex-1">
-                      <p className="font-semibold">{status.message}</p>
-                      {status.mailtoFallback && (
-                        <a
-                          href={status.mailtoFallback}
-                          className="mt-2 inline-flex items-center gap-1.5 text-xs font-mono underline font-bold"
-                        >
-                          <span>Open fallback email client</span>
-                          <ExternalLink className="w-3 h-3" />
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                )}
-
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  {/* Honeypot hidden input */}
-                  <div className="hidden">
-                    <label htmlFor="website">Website</label>
-                    <input
-                      id="website"
-                      type="text"
-                      name="website"
-                      value={formData.website}
-                      onChange={handleChange}
-                      tabIndex={-1}
-                      autoComplete="off"
-                    />
+                {/* Bottom Action Strip */}
+                <div className="pt-4 border-t border-theme-border/60 flex flex-wrap items-center justify-between gap-3">
+                  <div className="text-xs font-mono text-theme-textMuted">
+                    <span>Ready for technical discussions &amp; interviews.</span>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-xs font-mono font-bold uppercase tracking-wider text-theme-textMuted mb-2">
-                        Your Name *
-                      </label>
-                      <input
-                        type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        placeholder="John Doe"
-                        className="w-full px-4 py-3 bg-theme-bg border border-theme-border rounded-xl text-xs sm:text-sm text-white placeholder:text-theme-textMuted focus:outline-none focus:border-teal-400 focus:ring-1 focus:ring-teal-400 shadow-inner"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-mono font-bold uppercase tracking-wider text-theme-textMuted mb-2">
-                        Your Email *
-                      </label>
-                      <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        placeholder="john@example.com"
-                        className="w-full px-4 py-3 bg-theme-bg border border-theme-border rounded-xl text-xs sm:text-sm text-white placeholder:text-theme-textMuted focus:outline-none focus:border-teal-400 focus:ring-1 focus:ring-teal-400 shadow-inner"
-                      />
-                    </div>
-                  </div>
+                  <div className="flex items-center gap-2.5">
+                    <button
+                      onClick={() => setIsDiagramModalOpen(true)}
+                      type="button"
+                      className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-bold text-cyan-300 bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 rounded-xl transition-all"
+                    >
+                      <Eye className="w-3.5 h-3.5" />
+                      <span>View Diagram</span>
+                    </button>
 
-                  <div>
-                    <label className="block text-xs font-mono font-bold uppercase tracking-wider text-theme-textMuted mb-2">
-                      Subject
-                    </label>
-                    <input
-                      type="text"
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleChange}
-                      placeholder="Opportunity / Project Consultation"
-                      className="w-full px-4 py-3 bg-theme-bg border border-theme-border rounded-xl text-xs sm:text-sm text-white placeholder:text-theme-textMuted focus:outline-none focus:border-teal-400 focus:ring-1 focus:ring-teal-400 shadow-inner"
-                    />
-                  </div>
+                    <a
+                      href={personal.cvPath}
+                      download={personal.cvFileName}
+                      className="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-bold text-black bg-gradient-to-r from-teal-400 via-cyan-300 to-emerald-400 hover:from-teal-300 hover:to-cyan-200 rounded-xl shadow-md shadow-teal-500/20 transition-all hover:scale-105 active:scale-95"
+                    >
+                      <Download className="w-3.5 h-3.5" />
+                      <span>Download CV</span>
+                    </a>
 
-                  <div>
-                    <label className="block text-xs font-mono font-bold uppercase tracking-wider text-theme-textMuted mb-2">
-                      Message *
-                    </label>
-                    <textarea
-                      name="message"
-                      rows={5}
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                      placeholder="Write your message, role requirements, or project details..."
-                      className="w-full px-4 py-3 bg-theme-bg border border-theme-border rounded-xl text-xs sm:text-sm text-white placeholder:text-theme-textMuted focus:outline-none focus:border-teal-400 focus:ring-1 focus:ring-teal-400 resize-none shadow-inner"
-                    />
+                    <a
+                      href="https://wa.me/919451697870"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-bold text-emerald-300 hover:text-white bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/30 rounded-xl transition-all"
+                    >
+                      <MessageCircle className="w-3.5 h-3.5 text-emerald-400" />
+                      <span>WhatsApp</span>
+                    </a>
                   </div>
-
-                  <button
-                    type="submit"
-                    disabled={submitting}
-                    className="w-full py-3.5 px-6 rounded-xl font-extrabold text-sm text-theme-bg bg-gradient-to-r from-teal-400 via-cyan-400 to-emerald-400 hover:from-teal-300 hover:to-emerald-300 transition-all duration-300 shadow-lg shadow-teal-500/25 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed group"
-                  >
-                    {submitting ? (
-                      <>
-                        <span className="w-4 h-4 border-2 border-theme-bg border-t-transparent rounded-full animate-spin" />
-                        <span>Sending message...</span>
-                      </>
-                    ) : (
-                      <>
-                        <Send className="w-4 h-4 text-theme-bg group-hover:translate-x-0.5 transition-transform" />
-                        <span>Send Message Directly</span>
-                      </>
-                    )}
-                  </button>
-                </form>
+                </div>
               </div>
             </MotionDiv>
           </div>
         </div>
       </div>
+
+      {/* Full-Screen Architecture Diagram Lightbox Modal */}
+      {isDiagramModalOpen && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          onClick={() => setIsDiagramModalOpen(false)}
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/90 backdrop-blur-md animate-in fade-in duration-200"
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="relative w-full max-w-6xl max-h-[94vh] bg-theme-surface border border-teal-500/40 rounded-2xl shadow-2xl flex flex-col overflow-hidden"
+          >
+            {/* Modal Header */}
+            <div className="flex items-center justify-between px-5 py-3.5 border-b border-theme-border bg-theme-surfaceElevated">
+              <div>
+                <h3 className="text-sm sm:text-base font-bold text-white flex items-center gap-2">
+                  <span>Enterprise .NET Architecture Vision</span>
+                  <span className="px-2 py-0.5 text-[10px] font-mono rounded bg-teal-500/15 text-teal-300 border border-teal-500/30">
+                    Clean Architecture &bull; DDD
+                  </span>
+                </h3>
+                <p className="text-xs font-mono text-cyan-300">
+                  Scalable &bull; Secure &bull; Maintainable &bull; Future Ready
+                </p>
+              </div>
+
+              <button
+                onClick={() => setIsDiagramModalOpen(false)}
+                type="button"
+                className="p-2 text-theme-textSecondary hover:text-white hover:bg-theme-surface rounded-xl transition-colors border border-theme-border"
+                aria-label="Close preview"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Modal Image Body with high-resolution scroll */}
+            <div className="flex-1 overflow-auto bg-slate-950 p-2 sm:p-4 flex items-center justify-center">
+              <img
+                src="/images/enterprise-dotnet-architecture.png"
+                alt="Full Enterprise .NET Architecture Vision"
+                className="w-full h-auto max-h-[82vh] object-contain rounded-lg border border-theme-border/60 shadow-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

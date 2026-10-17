@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050a09" />
+      <stop offset="50%" stop-color="#0a1614" />
+      <stop offset="100%" stop-color="#06100e" />
+    </linearGradient>
+
+    <!-- Neon Teal Gradients -->
+    <linearGradient id="tealCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#14B8A6" />
+      <stop offset="50%" stop-color="#06B6D4" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+
+    <linearGradient id="glowLine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2DD4BF" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0.1" />
+    </linearGradient>
+
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f211d" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#081412" stop-opacity="0.95" />
+    </linearGradient>
+
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="softGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Deep Background -->
+  <rect width="800" height="420" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Ambient background glow spots -->
+  <circle cx="200" cy="120" r="140" fill="#14B8A6" opacity="0.08" filter="url(#neonGlow)" />
+  <circle cx="620" cy="280" r="160" fill="#6366F1" opacity="0.08" filter="url(#neonGlow)" />
+  <circle cx="400" cy="360" r="120" fill="#06B6D4" opacity="0.07" filter="url(#neonGlow)" />
+
+  <!-- Subtle Cyber Tech Grid Pattern -->
+  <g stroke="#14B8A6" stroke-width="0.5" opacity="0.15" stroke-dasharray="4 8">
+    <line x1="60" y1="0" x2="60" y2="420" />
+    <line x1="160" y1="0" x2="160" y2="420" />
+    <line x1="260" y1="0" x2="260" y2="420" />
+    <line x1="360" y1="0" x2="360" y2="420" />
+    <line x1="460" y1="0" x2="460" y2="420" />
+    <line x1="560" y1="0" x2="560" y2="420" />
+    <line x1="660" y1="0" x2="660" y2="420" />
+    <line x1="740" y1="0" x2="740" y2="420" />
+    <line x1="0" y1="60" x2="800" y2="60" />
+    <line x1="0" y1="140" x2="800" y2="140" />
+    <line x1="0" y1="220" x2="800" y2="220" />
+    <line x1="0" y1="300" x2="800" y2="300" />
+    <line x1="0" y1="380" x2="800" y2="380" />
+  </g>
+
+  <!-- Network Circuit Lines Connecting Modules -->
+  <path d="M 180 160 L 260 160 L 320 210 L 480 210 L 540 160 L 620 160" fill="none" stroke="#2DD4BF" stroke-width="2" opacity="0.4" filter="url(#softGlow)" />
+  <path d="M 320 210 L 320 280 L 480 280 L 480 210" fill="none" stroke="#06B6D4" stroke-width="2" opacity="0.3" />
+  <path d="M 400 90 L 400 210" fill="none" stroke="#818CF8" stroke-width="2" opacity="0.4" stroke-dasharray="3 3" />
+
+  <!-- Central Enterprise Engine Node -->
+  <g transform="translate(330, 150)">
+    <rect width="140" height="120" rx="14" fill="url(#cardBg)" stroke="#14B8A6" stroke-width="1.5" filter="url(#softGlow)" />
+    <!-- Glowing Status Ring -->
+    <circle cx="70" cy="40" r="22" fill="#0d2b25" stroke="#2DD4BF" stroke-width="2" />
+    <path d="M 62 40 L 68 46 L 80 34" fill="none" stroke="#2DD4BF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="70" y="80" fill="#ffffff" font-family="system-ui, sans-serif" font-weight="800" font-size="12" text-anchor="middle">.NET CORE / MVC</text>
+    <text x="70" y="98" fill="#2DD4BF" font-family="monospace" font-weight="600" font-size="9.5" text-anchor="middle">HIGH-THROUGHPUT</text>
+  </g>
+
+  <!-- Left Node: SQL Server High Volume DB -->
+  <g transform="translate(70, 105)">
+    <rect width="140" height="110" rx="12" fill="url(#cardBg)" stroke="#06B6D4" stroke-width="1.2" />
+    <!-- Cylinder database icon -->
+    <ellipse cx="70" cy="32" rx="24" ry="9" fill="#0e2a2c" stroke="#06B6D4" stroke-width="1.5" />
+    <path d="M 46 32 v 16 c 0 5 11 9 24 9 s 24 -4 24 -9 v -16" fill="#0e2a2c" stroke="#06B6D4" stroke-width="1.5" />
+    <path d="M 46 48 v 16 c 0 5 11 9 24 9 s 24 -4 24 -9 v -16" fill="#0e2a2c" stroke="#06B6D4" stroke-width="1.5" />
+    <text x="70" y="88" fill="#ffffff" font-family="system-ui, sans-serif" font-weight="700" font-size="11" text-anchor="middle">SQL SERVER</text>
+    <text x="70" y="102" fill="#38BDF8" font-family="monospace" font-size="9" text-anchor="middle">Stored Procs &amp; ACID</text>
+  </g>
+
+  <!-- Right Node: Statutory APIs (eWay Bill & IRN) -->
+  <g transform="translate(590, 105)">
+    <rect width="140" height="110" rx="12" fill="url(#cardBg)" stroke="#818CF8" stroke-width="1.2" />
+    <!-- API Integration Icon -->
+    <circle cx="70" cy="38" r="18" fill="#1b1c3a" stroke="#818CF8" stroke-width="1.5" />
+    <path d="M 64 34 L 76 34 M 64 42 L 76 42 M 70 30 L 70 46" stroke="#C7D2FE" stroke-width="2" stroke-linecap="round" />
+    <text x="70" y="86" fill="#ffffff" font-family="system-ui, sans-serif" font-weight="700" font-size="11" text-anchor="middle">GOVT COMPLIANCE</text>
+    <text x="70" y="100" fill="#A5B4FC" font-family="monospace" font-size="9" text-anchor="middle">NIC eWay &amp; GST IRN</text>
+  </g>
+
+  <!-- Bottom Node: Android Mobile REST Gateway -->
+  <g transform="translate(260, 305)">
+    <rect width="280" height="75" rx="12" fill="url(#cardBg)" stroke="#10B981" stroke-width="1.2" />
+    <circle cx="45" cy="37" r="16" fill="#0e2e21" stroke="#10B981" stroke-width="1.5" />
+    <path d="M 41 33 h 8 v 8 h -8 z" fill="#34D399" />
+    <text x="75" y="32" fill="#ffffff" font-family="system-ui, sans-serif" font-weight="700" font-size="11.5">Mobile REST API Endpoints</text>
+    <text x="75" y="49" fill="#6EE7B7" font-family="monospace" font-size="9">Real-time Barcode Scan, Dispatch DRS &amp; POD Verification</text>
+  </g>
+
+  <!-- Top Code Header Terminal Bar -->
+  <g transform="translate(240, 25)">
+    <rect width="320" height="42" rx="10" fill="#040c0b" stroke="#14B8A6" stroke-width="1" />
+    <circle cx="20" cy="21" r="4.5" fill="#EF4444" opacity="0.8" />
+    <circle cx="34" cy="21" r="4.5" fill="#F59E0B" opacity="0.8" />
+    <circle cx="48" cy="21" r="4.5" fill="#10B981" opacity="0.8" />
+    <text x="70" y="25" fill="#2DD4BF" font-family="monospace" font-weight="700" font-size="11">C# &bull; ASP.NET Web API &bull; SQL Server</text>
+  </g>
+
+  <!-- Decorative Glowing Dots -->
+  <circle cx="180" cy="160" r="3.5" fill="#2DD4BF" />
+  <circle cx="320" cy="210" r="3.5" fill="#06B6D4" />
+  <circle cx="480" cy="210" r="3.5" fill="#06B6D4" />
+  <circle cx="620" cy="160" r="3.5" fill="#818CF8" />
+  <circle cx="400" cy="90" r="3.5" fill="#818CF8" />
+</svg>
