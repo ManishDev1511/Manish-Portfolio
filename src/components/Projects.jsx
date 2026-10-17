@@ -19,13 +19,14 @@ import {
   Eye,
   Check,
   Flame,
+  Globe,
 } from "lucide-react";
 import { portfolioData } from "@/data/portfolioData";
 
 export default function Projects() {
   const { featuredProjects, additionalProjects } = portfolioData;
   const [filter, setFilter] = useState("all");
-  const [showAdditional, setShowAdditional] = useState(false);
+  const [showAdditional, setShowAdditional] = useState(true);
   const [previewImage, setPreviewImage] = useState(null);
 
   const filterCategories = [
@@ -37,6 +38,7 @@ export default function Projects() {
 
   const projectColorThemes = {
     "courier-mitra": {
+      liveUrl: "https://app.couriermitra.com",
       domainLabel: "app.couriermitra.com",
       accentText: "text-red-400",
       accentBg: "bg-red-500/10 text-red-400 border-red-500/20",
@@ -46,7 +48,8 @@ export default function Projects() {
       archBg: "bg-red-950/15 border-red-500/20 text-zinc-300",
     },
     "gracious-logistics": {
-      domainLabel: "erp.graciouslogistics.com",
+      liveUrl: "https://app.graciouslogistics.com/",
+      domainLabel: "app.graciouslogistics.com",
       accentText: "text-rose-400",
       accentBg: "bg-rose-500/10 text-rose-400 border-rose-500/20",
       borderHover: "hover:border-rose-500/40",
@@ -55,7 +58,8 @@ export default function Projects() {
       archBg: "bg-rose-950/15 border-rose-500/20 text-zinc-300",
     },
     "asian-roadways": {
-      domainLabel: "portal.asianroadways.com",
+      liveUrl: "https://lms.asianroadways.co.in/",
+      domainLabel: "lms.asianroadways.co.in",
       accentText: "text-red-400",
       accentBg: "bg-red-500/10 text-red-400 border-red-500/20",
       borderHover: "hover:border-red-500/40",
@@ -64,7 +68,8 @@ export default function Projects() {
       archBg: "bg-red-950/15 border-red-500/20 text-zinc-300",
     },
     "yuantai-logistics": {
-      domainLabel: "cargo.yuantailogistics.com",
+      liveUrl: "http://tms.yuantailogistics.in/",
+      domainLabel: "tms.yuantailogistics.in",
       accentText: "text-rose-400",
       accentBg: "bg-rose-500/10 text-rose-400 border-rose-500/20",
       borderHover: "hover:border-rose-500/40",
@@ -143,19 +148,47 @@ export default function Projects() {
                 className={`rounded-2xl bg-theme-surface border border-theme-border/80 overflow-hidden ${theme.borderHover} shadow-xl ${theme.glowColor} transition-all duration-300 flex flex-col group hover:-translate-y-1`}
               >
                 {/* Browser-style Top Bar */}
-                <div className="px-4 py-2 bg-theme-surfaceElevated border-b border-theme-border/70 flex items-center justify-between text-xs font-mono text-theme-textMuted">
-                  <div className="flex items-center gap-2">
-                    <span className="w-2.5 h-2.5 rounded-full bg-red-500 inline-block" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80 inline-block" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80 inline-block" />
-                    <span className="text-[11px] text-theme-textMuted ml-2 font-mono">
-                      https://{theme.domainLabel}
-                    </span>
+                <div className="px-4 py-2.5 bg-theme-surfaceElevated border-b border-theme-border/70 flex items-center justify-between gap-3 text-xs font-mono">
+                  <div className="flex items-center gap-2.5 min-w-0">
+                    <div className="flex items-center gap-1.5 shrink-0">
+                      <span className="w-2.5 h-2.5 rounded-full bg-red-500 inline-block" />
+                      <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80 inline-block" />
+                      <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80 inline-block" />
+                    </div>
+
+                    {/* Clickable Browser Address Bar */}
+                    <a
+                      href={proj.liveUrl || theme.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group/url inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-zinc-950/90 border border-zinc-800 text-zinc-300 hover:text-white hover:border-red-500/60 hover:bg-zinc-900 transition-all max-w-[210px] sm:max-w-xs md:max-w-sm"
+                      title={`Open ${proj.liveUrl || theme.liveUrl} in new tab`}
+                    >
+                      {(proj.liveUrl || theme.liveUrl)?.startsWith("https") ? (
+                        <Lock className="w-2.5 h-2.5 text-emerald-400 shrink-0" />
+                      ) : (
+                        <Globe className="w-2.5 h-2.5 text-amber-400 shrink-0" />
+                      )}
+                      <span className="text-[11px] font-mono text-zinc-300 group-hover/url:text-red-300 transition-colors truncate">
+                        {proj.liveUrl || theme.liveUrl}
+                      </span>
+                      <ExternalLink className="w-2.5 h-2.5 text-zinc-500 group-hover/url:text-red-400 shrink-0 transition-colors ml-1" />
+                    </a>
                   </div>
-                  <span className="inline-flex items-center gap-1 text-[10px] text-red-400 font-bold bg-red-500/10 px-2 py-0.5 rounded border border-red-500/20">
-                    <Check className="w-3 h-3" />
-                    <span>Live Production UI</span>
-                  </span>
+
+                  {/* Clickable Live Production Badge */}
+                  <a
+                    href={proj.liveUrl || theme.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-[10px] text-red-400 hover:text-red-300 font-bold bg-red-500/10 hover:bg-red-500/20 px-2.5 py-1 rounded border border-red-500/20 hover:border-red-500/40 transition-all shrink-0 group/badge"
+                    title={`Visit live production system: ${proj.liveUrl || theme.liveUrl}`}
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                    <span className="hidden sm:inline">Live Production UI</span>
+                    <span className="sm:hidden">Live UI</span>
+                    <ExternalLink className="w-2.5 h-2.5 opacity-70 group-hover/badge:opacity-100 transition-opacity" />
+                  </a>
                 </div>
 
                 {/* Project Visual Image Screenshot with Zoom Trigger */}
@@ -208,14 +241,27 @@ export default function Projects() {
                           {proj.category}
                         </p>
                       </div>
-                      <button
-                        onClick={() => setPreviewImage({ src: proj.image, title: proj.title, category: proj.category })}
-                        type="button"
-                        className="p-2 rounded-xl bg-theme-surfaceElevated border border-theme-border text-theme-textSecondary hover:text-white hover:border-red-500 transition-colors flex-shrink-0"
-                        title="View Full Screenshot"
-                      >
-                        <Eye className="w-4 h-4" />
-                      </button>
+                      <div className="flex items-center gap-2 shrink-0">
+                        {(proj.liveUrl || theme.liveUrl) && (
+                          <a
+                            href={proj.liveUrl || theme.liveUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-2 rounded-xl bg-theme-surfaceElevated border border-theme-border text-theme-textSecondary hover:text-white hover:border-red-500 hover:bg-red-950/20 transition-all"
+                            title={`Open Live System (${proj.liveUrl || theme.liveUrl})`}
+                          >
+                            <ExternalLink className="w-4 h-4 text-red-400" />
+                          </a>
+                        )}
+                        <button
+                          onClick={() => setPreviewImage({ src: proj.image, title: proj.title, category: proj.category })}
+                          type="button"
+                          className="p-2 rounded-xl bg-theme-surfaceElevated border border-theme-border text-theme-textSecondary hover:text-white hover:border-red-500 transition-colors"
+                          title="View Full Screenshot"
+                        >
+                          <Eye className="w-4 h-4" />
+                        </button>
+                      </div>
                     </div>
 
                     <p className="text-xs sm:text-sm text-zinc-300 mb-5 leading-relaxed">
@@ -254,8 +300,8 @@ export default function Projects() {
                     </div>
                   </div>
 
-                  {/* Tech Stack Footer */}
-                  <div className="pt-4 border-t border-theme-border/60">
+                  {/* Tech Stack & Action Footer */}
+                  <div className="pt-4 border-t border-theme-border/60 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <div className="flex flex-wrap gap-1.5">
                       {proj.techStack.map((tech) => (
                         <span
@@ -266,6 +312,17 @@ export default function Projects() {
                         </span>
                       ))}
                     </div>
+                    {(proj.liveUrl || theme.liveUrl) && (
+                      <a
+                        href={proj.liveUrl || theme.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono font-bold text-red-400 hover:text-white bg-red-500/10 hover:bg-red-600 rounded-lg border border-red-500/30 transition-all self-start sm:self-auto shrink-0 group/btn shadow-sm"
+                      >
+                        <span>Visit Live Platform</span>
+                        <ExternalLink className="w-3.5 h-3.5 transition-transform group-hover/btn:translate-x-0.5" />
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
@@ -304,25 +361,61 @@ export default function Projects() {
 
           {showAdditional && (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 pt-6 mt-6 border-t border-theme-border/60">
-              {additionalProjects.map((p, pIdx) => {
-                const borderColors = [
-                  "hover:border-red-500/50",
-                  "hover:border-rose-500/50",
-                  "hover:border-amber-500/50",
-                  "hover:border-red-400/50",
-                ];
-                const activeHover = borderColors[pIdx % borderColors.length];
-
+              {additionalProjects.map((p) => {
                 return (
                   <div
                     key={p.name}
-                    className={`p-4 rounded-xl bg-theme-bg/90 border border-theme-border/70 ${activeHover} transition-all duration-200 hover:scale-[1.01]`}
+                    className="group relative flex flex-col justify-between p-4 rounded-xl bg-theme-bg/90 border border-theme-border/70 hover:border-red-500/50 transition-all duration-200 hover:scale-[1.01] hover:shadow-lg hover:shadow-red-950/20"
                   >
-                    <div className="font-bold text-sm text-white mb-1">
-                      {p.name}
+                    <div>
+                      <div className="flex items-center justify-between gap-2 mb-2">
+                        <div className="font-bold text-sm text-white group-hover:text-red-300 transition-colors">
+                          {p.name}
+                        </div>
+                        {p.url && (
+                          <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-[10px] font-medium text-emerald-400 shrink-0">
+                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                            Live System
+                          </span>
+                        )}
+                      </div>
+                      <div className="text-xs text-theme-textMuted leading-relaxed mb-3">
+                        {p.focus}
+                      </div>
                     </div>
-                    <div className="text-xs text-theme-textMuted leading-relaxed">
-                      {p.focus}
+
+                    {/* URL links section */}
+                    <div className="pt-2.5 border-t border-theme-border/50 space-y-1.5 mt-auto">
+                      {p.url && (
+                        <a
+                          href={p.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group/link flex items-center justify-between gap-2 px-2.5 py-1.5 rounded-lg bg-zinc-950/80 border border-zinc-800 text-zinc-300 hover:text-white hover:border-red-500/60 hover:bg-red-950/20 text-[11px] font-mono transition-all duration-200"
+                          title={`Open ${p.name} (${p.domain})`}
+                        >
+                          <div className="flex items-center gap-1.5 min-w-0">
+                            <Globe className="w-3 h-3 text-red-400 shrink-0" />
+                            <span className="truncate">{p.domain}</span>
+                          </div>
+                          <ExternalLink className="w-3 h-3 text-zinc-500 group-hover/link:text-red-400 shrink-0 transition-colors" />
+                        </a>
+                      )}
+                      {p.altUrl && (
+                        <a
+                          href={p.altUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group/link flex items-center justify-between gap-2 px-2.5 py-1.5 rounded-lg bg-zinc-950/80 border border-zinc-800 text-zinc-300 hover:text-white hover:border-amber-500/60 hover:bg-amber-950/20 text-[11px] font-mono transition-all duration-200"
+                          title={`Open Admin Portal (${p.altDomain})`}
+                        >
+                          <div className="flex items-center gap-1.5 min-w-0">
+                            <Globe className="w-3 h-3 text-amber-400 shrink-0" />
+                            <span className="truncate">{p.altDomain}</span>
+                          </div>
+                          <ExternalLink className="w-3 h-3 text-zinc-500 group-hover/link:text-amber-400 shrink-0 transition-colors" />
+                        </a>
+                      )}
                     </div>
                   </div>
                 );
