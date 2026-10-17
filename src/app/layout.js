@@ -66,7 +66,7 @@ export const metadata = {
 };
 
 export const viewport = {
-  themeColor: "#050807",
+  themeColor: "#090A0F",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -125,14 +125,13 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen bg-theme-bg text-theme-textPrimary selection:bg-theme-teal selection:text-theme-bg font-sans antialiased relative overflow-x-hidden">
-        {/* Multi-color ambient atmospheric glows */}
+      <body className="min-h-screen bg-theme-bg text-theme-textPrimary selection:bg-red-600 selection:text-white font-sans antialiased relative overflow-x-hidden">
+        {/* Subtle, executive ambient atmospheric glows */}
         <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[550px] bg-gradient-to-b from-teal-500/15 via-emerald-500/10 to-transparent blur-[140px] rounded-full" />
-          <div className="absolute top-1/4 -left-40 w-[650px] h-[550px] bg-cyan-500/10 blur-[160px] rounded-full" />
-          <div className="absolute top-1/2 -right-40 w-[700px] h-[600px] bg-purple-500/10 blur-[170px] rounded-full" />
-          <div className="absolute bottom-1/4 left-1/4 w-[600px] h-[500px] bg-amber-500/5 blur-[160px] rounded-full" />
-          <div className="absolute -bottom-20 right-1/3 w-[800px] h-[400px] bg-teal-500/10 blur-[150px] rounded-full" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[450px] bg-gradient-to-b from-rose-950/25 via-red-950/15 to-transparent blur-[140px] rounded-full" />
+          <div className="absolute top-1/4 -left-40 w-[550px] h-[450px] bg-red-950/15 blur-[160px] rounded-full" />
+          <div className="absolute top-1/2 -right-40 w-[600px] h-[500px] bg-rose-950/15 blur-[170px] rounded-full" />
+          <div className="absolute -bottom-20 right-1/3 w-[700px] h-[350px] bg-red-950/15 blur-[160px] rounded-full" />
         </div>
 
         <div className="relative z-10 flex flex-col min-h-screen">

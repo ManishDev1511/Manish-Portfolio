@@ -30,18 +30,18 @@ export default function Navbar({ onOpenResumeModal }) {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-theme-bg/90 backdrop-blur-md border-b border-theme-border/80 py-3 shadow-xl shadow-black/40"
+          ? "bg-theme-bg/95 backdrop-blur-md border-b border-theme-border/90 py-3 shadow-xl shadow-red-950/30"
           : "bg-transparent py-4"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Logo / Brand with Colorful Avatar Ring */}
+          {/* Logo / Brand with Red/Rose Glow Avatar Ring */}
           <Link
             href="#"
-            className="group flex items-center gap-3 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-theme-teal rounded-xl p-1"
+            className="group flex items-center gap-3 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded-xl p-1"
           >
-            <div className="relative p-[2px] rounded-full bg-gradient-to-tr from-teal-400 via-cyan-400 to-indigo-500 shadow-lg shadow-teal-500/25 group-hover:scale-105 transition-transform flex-shrink-0">
+            <div className="relative p-[2px] rounded-full bg-gradient-to-tr from-red-600 via-rose-500 to-red-400 shadow-md shadow-red-950/50 group-hover:scale-105 transition-transform flex-shrink-0">
               <div className="w-10 h-10 rounded-full overflow-hidden bg-theme-surface">
                 <img
                   src={portfolioData.personal.avatarPath}
@@ -49,15 +49,15 @@ export default function Navbar({ onOpenResumeModal }) {
                   className="w-full h-full object-cover object-top"
                 />
               </div>
-              <span className="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-emerald-400 border-2 border-theme-bg" />
+              <span className="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-red-500 border-2 border-theme-bg animate-pulse" />
             </div>
 
             <div>
               <div className="flex items-center gap-2">
-                <span className="font-extrabold text-base tracking-tight text-white group-hover:text-cyan-300 transition-colors">
+                <span className="font-extrabold text-base tracking-tight text-white group-hover:text-red-400 transition-colors">
                   {portfolioData.personal.name}
                 </span>
-                <span className="hidden sm:inline-block px-2 py-0.5 text-[10px] font-mono font-bold rounded-full bg-teal-500/15 text-teal-300 border border-teal-500/30">
+                <span className="hidden sm:inline-block px-2 py-0.5 text-[10px] font-mono font-bold rounded-full bg-red-500/15 text-red-400 border border-red-500/30">
                   .NET Dev
                 </span>
               </div>
@@ -68,12 +68,12 @@ export default function Navbar({ onOpenResumeModal }) {
           </Link>
 
           {/* Desktop Nav Items */}
-          <nav className="hidden md:flex items-center gap-1 bg-theme-surface/80 border border-theme-border/80 rounded-full px-4 py-1.5 backdrop-blur-xl shadow-lg shadow-black/20">
+          <nav className="hidden md:flex items-center gap-1 bg-theme-surface/90 border border-theme-border/90 rounded-full px-4 py-1.5 backdrop-blur-xl shadow-lg shadow-black/40">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="px-3.5 py-1.5 text-xs lg:text-sm font-semibold text-theme-textSecondary hover:text-white rounded-full hover:bg-gradient-to-r hover:from-teal-500/20 hover:to-cyan-500/20 transition-all"
+                className="px-3.5 py-1.5 text-xs lg:text-sm font-semibold text-theme-textSecondary hover:text-white rounded-full hover:bg-red-500/15 hover:text-red-300 transition-all"
               >
                 {link.name}
               </a>
@@ -98,18 +98,18 @@ export default function Navbar({ onOpenResumeModal }) {
             <button
               onClick={onOpenResumeModal}
               type="button"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-theme-textSecondary hover:text-white bg-theme-surface hover:bg-theme-surfaceElevated border border-theme-border rounded-lg transition-colors"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-theme-textSecondary hover:text-white bg-theme-surface hover:bg-theme-surfaceElevated border border-theme-border hover:border-red-500/40 rounded-lg transition-colors"
               title="Preview CV in modal"
             >
-              <FileText className="w-3.5 h-3.5 text-teal-400" />
+              <FileText className="w-3.5 h-3.5 text-red-400" />
               <span>Preview CV</span>
             </button>
 
-            {/* Glowing Download CV Button */}
+            {/* Fiery Red Glowing Download CV Button */}
             <a
               href={portfolioData.personal.cvPath}
               download={portfolioData.personal.cvFileName}
-              className="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold text-black bg-gradient-to-r from-teal-400 via-emerald-300 to-cyan-400 hover:from-teal-300 hover:to-cyan-300 rounded-lg shadow-lg shadow-teal-500/30 hover:shadow-teal-500/50 hover:scale-[1.02] active:scale-[0.98] transition-all"
+              className="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold text-white bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 rounded-lg shadow-md shadow-red-950/60 hover:shadow-red-800/40 hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer"
             >
               <Download className="w-3.5 h-3.5" />
               <span>Download CV</span>
@@ -121,7 +121,7 @@ export default function Navbar({ onOpenResumeModal }) {
             <a
               href={portfolioData.personal.cvPath}
               download={portfolioData.personal.cvFileName}
-              className="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-bold text-black bg-gradient-to-r from-teal-400 to-cyan-400 rounded-md shadow-sm"
+              className="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-bold text-white bg-gradient-to-r from-red-600 to-rose-600 rounded-md shadow-sm"
               aria-label="Download CV"
             >
               <Download className="w-3.5 h-3.5" />
@@ -150,7 +150,7 @@ export default function Navbar({ onOpenResumeModal }) {
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="px-4 py-2.5 text-sm font-semibold text-theme-textSecondary hover:text-white hover:bg-gradient-to-r hover:from-teal-500/20 hover:to-cyan-500/20 rounded-xl transition-colors flex items-center justify-between"
+                className="px-4 py-2.5 text-sm font-semibold text-theme-textSecondary hover:text-white hover:bg-red-500/15 hover:text-red-300 rounded-xl transition-colors flex items-center justify-between"
               >
                 <span>{link.name}</span>
                 <ArrowUpRight className="w-3.5 h-3.5 opacity-50" />
@@ -173,48 +173,21 @@ export default function Navbar({ onOpenResumeModal }) {
                   setMobileMenuOpen(false);
                   onOpenResumeModal?.();
                 }}
+                type="button"
                 className="w-full inline-flex items-center justify-center gap-2 py-2.5 text-sm font-semibold text-white bg-theme-surfaceElevated border border-theme-border rounded-xl"
               >
-                <FileText className="w-4 h-4 text-teal-400" />
-                <span>Preview CV Modal</span>
+                <FileText className="w-4 h-4 text-red-400" />
+                <span>Preview CV</span>
               </button>
 
               <a
                 href={portfolioData.personal.cvPath}
                 download={portfolioData.personal.cvFileName}
-                className="w-full inline-flex items-center justify-center gap-2 py-2.5 text-sm font-bold text-black bg-gradient-to-r from-teal-400 via-emerald-300 to-cyan-400 rounded-xl shadow-lg shadow-teal-500/30"
+                className="w-full inline-flex items-center justify-center gap-2 py-2.5 text-sm font-bold text-white bg-gradient-to-r from-red-600 to-rose-600 rounded-xl shadow-md shadow-red-600/30"
               >
                 <Download className="w-4 h-4" />
-                <span>Download Resume (PDF)</span>
+                <span>Download Official CV</span>
               </a>
-
-              <div className="flex items-center justify-center gap-4 pt-3 text-theme-textMuted text-xs">
-                <a
-                  href={portfolioData.personal.phoneHref}
-                  className="hover:text-teal-300 inline-flex items-center gap-1"
-                >
-                  <Phone className="w-3 h-3 text-emerald-400" />
-                  <span>Call</span>
-                </a>
-                <span>•</span>
-                <a
-                  href={portfolioData.personal.emailHref}
-                  className="hover:text-cyan-300 inline-flex items-center gap-1"
-                >
-                  <Mail className="w-3 h-3 text-cyan-400" />
-                  <span>Email</span>
-                </a>
-                <span>•</span>
-                <a
-                  href={portfolioData.personal.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-indigo-300 inline-flex items-center gap-1"
-                >
-                  <Linkedin className="w-3 h-3 text-indigo-400" />
-                  <span>LinkedIn</span>
-                </a>
-              </div>
             </div>
           </div>
         </div>

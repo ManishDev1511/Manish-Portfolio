@@ -11,18 +11,24 @@ module.exports = {
     extend: {
       colors: {
         theme: {
-          bg: "#050807",
-          surface: "#0E1715",
-          surfaceElevated: "#132320",
-          surfaceSubtle: "#091210",
-          border: "#182E29",
-          borderLight: "#23473F",
-          teal: "#14B8A6",
-          tealLight: "#2DD4BF",
-          tealDark: "#0F766E",
-          textPrimary: "#F1F5F4",
-          textSecondary: "#9EADA9",
-          textMuted: "#637571",
+          bg: "#090A0F",              /* Deep Obsidian Titanium Black */
+          surface: "#111218",         /* Sleek Dark Graphite Surface */
+          surfaceElevated: "#181922", /* Elevated Card / Modal Surface */
+          surfaceSubtle: "#0D0E14",   /* Subtle Section Contrast */
+          border: "#20222C",          /* Crisp Slate Dark Border */
+          borderLight: "#2E313E",     /* Subtle Highlight Border */
+          borderHighlight: "#E11D48", /* Executive Crimson Highlight */
+          teal: "#E11D48",            /* Primary Executive Crimson */
+          tealLight: "#F43F5E",       /* Radiant Rose Crimson */
+          tealDark: "#9F1239",        /* Deep Velvet Wine */
+          red: "#E11D48",             /* Primary Accent */
+          redLight: "#F43F5E",
+          redDark: "#9F1239",
+          crimson: "#DC2626",
+          rose: "#F43F5E",
+          textPrimary: "#FFFFFF",     /* Pure Crisp White */
+          textSecondary: "#94A3B8",   /* Slate-400 - High Contrast Readability */
+          textMuted: "#64748B",       /* Slate-500 - Professional Metadata */
         },
       },
       fontFamily: {

@@ -34,25 +34,25 @@ export default function ResumeViewerModal({ isOpen, onClose }) {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="relative w-full max-w-5xl h-[90vh] bg-theme-surface border border-teal-500/30 rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-in zoom-in-95 duration-200"
+        className="relative w-full max-w-5xl h-[90vh] bg-theme-surface border border-zinc-800 rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-in zoom-in-95 duration-200"
       >
-        {/* Rainbow top line */}
-        <div className="h-1 bg-gradient-to-r from-teal-400 via-cyan-400 via-purple-400 to-amber-400" />
+        {/* Top line */}
+        <div className="h-1 bg-gradient-to-r from-red-600 to-rose-600" />
 
         {/* Modal Header */}
         <div className="flex items-center justify-between px-5 py-3.5 border-b border-theme-border bg-theme-surfaceElevated">
           <div className="flex items-center gap-3">
-            <div className="p-2 rounded-xl bg-teal-500/15 border border-teal-500/30 text-teal-300">
+            <div className="p-2 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400">
               <FileText className="w-4 h-4" />
             </div>
             <div>
               <h3 id="modal-title" className="text-sm font-bold text-white flex items-center gap-2">
                 <span>{personal.name} &mdash; Official Curriculum Vitae</span>
-                <span className="hidden sm:inline-block px-2 py-0.5 text-[10px] font-mono bg-teal-500/15 text-teal-300 rounded border border-teal-500/30">
+                <span className="hidden sm:inline-block px-2 py-0.5 text-[10px] font-mono bg-red-500/10 text-red-400 rounded border border-red-500/25">
                   Verified Resume
                 </span>
               </h3>
-              <p className="text-[11px] font-mono text-cyan-300">
+              <p className="text-[11px] font-mono text-zinc-400">
                 {personal.cvFileName}
               </p>
             </div>
@@ -63,7 +63,7 @@ export default function ResumeViewerModal({ isOpen, onClose }) {
               href={personal.cvPath}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 text-theme-textSecondary hover:text-white rounded-xl hover:bg-theme-surface border border-theme-border text-xs hidden sm:inline-flex items-center gap-1.5 transition-colors"
+              className="p-2 text-zinc-400 hover:text-white rounded-xl hover:bg-zinc-900 border border-zinc-800 text-xs hidden sm:inline-flex items-center gap-1.5 transition-colors"
               title="Open PDF in new tab"
             >
               <ExternalLink className="w-3.5 h-3.5" />
@@ -73,7 +73,7 @@ export default function ResumeViewerModal({ isOpen, onClose }) {
             <a
               href={personal.cvPath}
               download={personal.cvFileName}
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-bold text-theme-bg bg-gradient-to-r from-teal-400 to-cyan-400 hover:from-teal-300 hover:to-cyan-300 rounded-xl transition-all shadow-md shadow-teal-500/20"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-bold text-white bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 rounded-xl transition-all shadow-md shadow-red-950/60"
               title="Download PDF"
             >
               <Download className="w-3.5 h-3.5" />

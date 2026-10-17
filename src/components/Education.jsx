@@ -1,6 +1,6 @@
 "use client";
 
-import { GraduationCap, Award, Calendar, BookOpen, School, Sparkles } from "lucide-react";
+import { GraduationCap, Award, Calendar, BookOpen, School, Sparkles, Flame } from "lucide-react";
 import { portfolioData } from "@/data/portfolioData";
 import { MotionDiv, MotionCard } from "./MotionWrapper";
 
@@ -10,56 +10,50 @@ export default function Education() {
   const cardConfigs = [
     {
       icon: GraduationCap,
-      border: "border-purple-500/40 hover:border-purple-400",
-      accentBg: "bg-purple-500/15 text-purple-300 border-purple-500/30",
-      gradient: "from-purple-500/10 via-theme-surface to-theme-surfaceElevated",
-      badgeClass: "bg-purple-500/20 text-purple-300 border-purple-500/40 font-bold animate-pulse shadow-sm shadow-purple-500/20",
-      topBar: "bg-gradient-to-r from-purple-500 via-indigo-500 to-cyan-400",
-      iconColor: "text-purple-300",
-      instColor: "text-purple-300",
+      border: "border-theme-border/80 hover:border-red-500/40",
+      accentBg: "bg-red-500/10 text-red-400 border-red-500/20",
+      badgeClass: "bg-red-500/10 text-red-400 border-red-500/25 font-semibold animate-pulse",
+      topBar: "bg-gradient-to-r from-red-600 to-rose-600",
+      instColor: "text-red-400",
     },
     {
       icon: Award,
-      border: "border-teal-500/30 hover:border-teal-400",
-      accentBg: "bg-teal-500/15 text-teal-300 border-teal-500/30",
-      gradient: "from-teal-500/10 via-theme-surface to-theme-surfaceElevated",
-      badgeClass: "bg-teal-500/15 text-teal-300 border-teal-500/30 font-semibold",
-      topBar: "bg-gradient-to-r from-teal-400 via-emerald-400 to-cyan-400",
-      iconColor: "text-teal-300",
-      instColor: "text-teal-300",
+      border: "border-theme-border/80 hover:border-red-500/40",
+      accentBg: "bg-red-500/10 text-red-400 border-red-500/20",
+      badgeClass: "bg-zinc-800 text-zinc-300 border-zinc-700 font-medium",
+      topBar: "bg-gradient-to-r from-red-600 to-rose-600",
+      instColor: "text-zinc-300",
     },
     {
       icon: School,
-      border: "border-amber-500/30 hover:border-amber-400",
-      accentBg: "bg-amber-500/15 text-amber-300 border-amber-500/30",
-      gradient: "from-amber-500/10 via-theme-surface to-theme-surfaceElevated",
-      badgeClass: "bg-amber-500/15 text-amber-300 border-amber-500/30 font-semibold",
-      topBar: "bg-gradient-to-r from-amber-400 to-orange-400",
-      iconColor: "text-amber-300",
-      instColor: "text-amber-300",
+      border: "border-theme-border/80 hover:border-red-500/40",
+      accentBg: "bg-red-500/10 text-red-400 border-red-500/20",
+      badgeClass: "bg-zinc-800 text-zinc-300 border-zinc-700 font-medium",
+      topBar: "bg-gradient-to-r from-red-600 to-rose-600",
+      instColor: "text-zinc-300",
     },
   ];
 
   return (
     <section id="education" className="py-20 md:py-28 relative bg-theme-surfaceSubtle overflow-hidden">
       {/* Background ambient glow */}
-      <div className="absolute top-1/4 right-10 w-[500px] h-[350px] bg-purple-500/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/4 right-10 w-[500px] h-[350px] bg-red-950/15 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="flex flex-col items-start mb-14">
           <MotionDiv>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-purple-500/15 via-teal-500/15 to-cyan-500/15 border border-purple-500/30 text-purple-300 text-xs font-mono font-bold mb-3 shadow-sm shadow-purple-500/10">
-              <Sparkles className="w-3.5 h-3.5 text-purple-400" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-500/10 border border-red-500/25 text-red-400 text-xs font-mono font-semibold mb-3">
+              <Flame className="w-3.5 h-3.5 text-red-400" />
               <span>ACADEMIC BACKGROUND</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
               Education &amp;{" "}
-              <span className="bg-gradient-to-r from-purple-300 via-teal-300 to-cyan-300 bg-clip-text text-transparent">
+              <span className="text-red-400">
                 Qualifications
               </span>
             </h2>
-            <p className="mt-3 text-base text-theme-textSecondary max-w-3xl">
+            <p className="mt-3 text-base text-zinc-300 max-w-3xl">
               Formal education combining technical computing diplomas and ongoing advanced post-graduate computer application studies.
             </p>
           </MotionDiv>
@@ -75,7 +69,7 @@ export default function Education() {
               <MotionCard
                 key={index}
                 delay={0.1 * (index + 1)}
-                className={`p-6 sm:p-7 rounded-2xl border ${cfg.border} bg-gradient-to-b ${cfg.gradient} shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden group hover:-translate-y-1`}
+                className={`p-6 sm:p-7 rounded-2xl border ${cfg.border} bg-theme-surface shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden group hover:-translate-y-1`}
               >
                 <div className={`absolute top-0 left-0 right-0 h-1 ${cfg.topBar}`} />
 
@@ -104,7 +98,7 @@ export default function Education() {
 
                 <div className="pt-4 border-t border-theme-border/60 flex items-center justify-between text-xs font-mono text-theme-textMuted">
                   <span className="flex items-center gap-1.5 text-white">
-                    <Calendar className="w-3.5 h-3.5 text-teal-400" />
+                    <Calendar className="w-3.5 h-3.5 text-red-400" />
                     <span>{item.period}</span>
                   </span>
                 </div>
