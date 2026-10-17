@@ -216,7 +216,10 @@ export default function Hero({ onOpenResumeModal }) {
               </div>
 
               {/* Floating Stat Card 2 (Bottom Right) */}
-              <div className="absolute -bottom-3 -right-3 sm:-right-6 p-3 sm:p-3.5 rounded-2xl bg-theme-surface/95 border border-white/[0.08] hover:border-red-500/40 backdrop-blur-xl shadow-xl shadow-black/60 flex items-center gap-3 animate-float transition-colors" style={{ animationDelay: "2s" }}>
+              <div
+                className="absolute -bottom-9 sm:-bottom-11 -right-2 sm:-right-4 z-20 p-3 sm:p-3.5 rounded-2xl bg-theme-surface/95 border border-white/[0.08] hover:border-red-500/40 backdrop-blur-xl shadow-2xl shadow-black/80 flex items-center gap-3 animate-float-reverse transition-all"
+                style={{ animationDelay: "1.5s" }}
+              >
                 <div className="p-2 sm:p-2.5 rounded-xl bg-rose-500/15 text-rose-400 border border-rose-500/30">
                   <Database className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>

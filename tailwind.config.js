@@ -38,12 +38,17 @@ module.exports = {
       animation: {
         "pulse-subtle": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
         "float": "float 6s ease-in-out infinite",
+        "float-reverse": "floatReverse 6s ease-in-out infinite",
         "glow": "glow 8s ease-in-out infinite alternate",
       },
       keyframes: {
         float: {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-8px)" },
+        },
+        floatReverse: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(8px)" },
         },
         glow: {
           "0%": { opacity: "0.4", filter: "blur(40px)" },
