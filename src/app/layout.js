@@ -126,11 +126,13 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className="min-h-screen bg-theme-bg text-theme-textPrimary selection:bg-theme-teal selection:text-theme-bg font-sans antialiased relative overflow-x-hidden">
-        {/* Subtle decorative background gradients */}
-        <div className="fixed inset-0 pointer-events-none z-0">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-theme-teal/5 blur-[140px] rounded-full" />
-          <div className="absolute top-1/3 -left-48 w-[600px] h-[500px] bg-theme-tealLight/5 blur-[160px] rounded-full" />
-          <div className="absolute bottom-1/4 -right-48 w-[700px] h-[600px] bg-theme-tealDark/5 blur-[160px] rounded-full" />
+        {/* Multi-color ambient atmospheric glows */}
+        <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[550px] bg-gradient-to-b from-teal-500/15 via-emerald-500/10 to-transparent blur-[140px] rounded-full" />
+          <div className="absolute top-1/4 -left-40 w-[650px] h-[550px] bg-cyan-500/10 blur-[160px] rounded-full" />
+          <div className="absolute top-1/2 -right-40 w-[700px] h-[600px] bg-purple-500/10 blur-[170px] rounded-full" />
+          <div className="absolute bottom-1/4 left-1/4 w-[600px] h-[500px] bg-amber-500/5 blur-[160px] rounded-full" />
+          <div className="absolute -bottom-20 right-1/3 w-[800px] h-[400px] bg-teal-500/10 blur-[150px] rounded-full" />
         </div>
 
         <div className="relative z-10 flex flex-col min-h-screen">

@@ -11,7 +11,7 @@ A production-ready portfolio built for **Manish Yadav** (.NET Developer with 3+ 
 - **Zero Fabrication**: No fabricated metrics, artificial testimonials, fake repositories, or non-existent live demos. All 4 flagship logistics ERP platforms (*Courier Mitra*, *Gracious Logistics*, *AsianRoadways*, and *YuantaiLogistics*) and secondary enterprise exposures are detailed with precise architectural responsibility.
 - **Downloadable Resume**: Built-in resume download pointing to `/Manish_Yadav_DotNet_Developer_CV.pdf`, plus an in-browser PDF preview modal.
 - **Direct Contact Channels**:
-  - Clickable phone: `+91 9451607870` (`tel:+919451607870`)
+  - Clickable phone: `+91 9451697870` (`tel:+919451697870`)
   - Clickable email: `manish.sp2060@gmail.com` (`mailto:manish.sp2060@gmail.com`)
   - Verified LinkedIn: `https://linkedin.com/in/mr-dev123`
   - Configurable GitHub link: Only rendered when `NEXT_PUBLIC_GITHUB_URL` is set to an active repository profile.

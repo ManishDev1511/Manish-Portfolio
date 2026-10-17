@@ -5,9 +5,9 @@ export const portfolioData = {
     headline: "Building Robust Backend Architectures & Enterprise Logistics Systems",
     subheadline:
       "3+ years of hands-on engineering experience developing high-volume web applications, RESTful APIs, and mission-critical ERP workflows with C#, ASP.NET MVC, Web API, and Microsoft SQL Server.",
-    phone: "+91 9451607870",
-    phoneDisplay: "+91 9451607870",
-    phoneHref: "tel:+919451607870",
+    phone: "+91 9451697870",
+    phoneDisplay: "+91 9451697870",
+    phoneHref: "tel:+919451697870",
     email: "manish.sp2060@gmail.com",
     emailHref: "mailto:manish.sp2060@gmail.com",
     linkedin: "https://linkedin.com/in/mr-dev123",
@@ -140,7 +140,7 @@ export const portfolioData = {
       id: "courier-mitra",
       title: "Courier Mitra",
       category: "Courier & Logistics Management System",
-      image: "/images/projects/courier-mitra.svg",
+      image: "/images/projects/courier-mitra.png",
       techStack: ["ASP.NET MVC", "C#", "ASP.NET Web API", "SQL Server", "jQuery", "Bootstrap"],
       summary:
         "Comprehensive web platform for parcel booking, automated rate calculation, multi-branch operations, and real-time shipment tracking.",
@@ -160,7 +160,7 @@ export const portfolioData = {
       id: "gracious-logistics",
       title: "Gracious Logistics",
       category: "Courier ERP & Financial Operations Platform",
-      image: "/images/projects/gracious-logistics.svg",
+      image: "/images/projects/gracious-logistics.png",
       techStack: [
         "ASP.NET MVC",
         "ADO.NET",
@@ -186,7 +186,7 @@ export const portfolioData = {
       id: "asian-roadways",
       title: "AsianRoadways",
       category: "Transport, Consignment Tracking & Finance Suite",
-      image: "/images/projects/asian-roadways.svg",
+      image: "/images/projects/asian-roadways.png",
       techStack: [
         "ASP.NET MVC",
         "ASP.NET Web API",
@@ -211,7 +211,7 @@ export const portfolioData = {
       id: "yuantai-logistics",
       title: "YuantaiLogistics",
       category: "International Logistics & Transportation Management",
-      image: "/images/projects/yuantai-logistics.svg",
+      image: "/images/projects/yuantai-logistics.png",
       techStack: [
         "ASP.NET MVC",
         "SQL Server",
