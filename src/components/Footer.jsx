@@ -1,6 +1,7 @@
 "use client";
 
-import { ArrowUp, Phone, Mail, Linkedin, Github, ShieldCheck, MessageCircle, Heart } from "lucide-react";
+import Image from "next/image";
+import { ArrowUp, Phone, Mail, Linkedin, Github, ShieldCheck, MessageCircle, Heart, Sparkles } from "lucide-react";
 import { portfolioData } from "@/data/portfolioData";
 
 export default function Footer() {
@@ -13,11 +14,23 @@ export default function Footer() {
   return (
     <footer className="bg-theme-bg border-t border-theme-border/80 pt-16 pb-12 relative overflow-hidden">
       {/* Rainbow gradient accent line at very top of footer */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-teal-400 via-cyan-400 via-purple-400 to-amber-400" />
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-teal-400 via-cyan-400 via-purple-400 to-amber-400 z-20" />
 
-      {/* Multi-color ambient background glows */}
-      <div className="absolute bottom-0 left-1/3 -translate-x-1/2 w-[500px] h-[160px] bg-teal-500/10 blur-[130px] pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-[400px] h-[160px] bg-purple-500/10 blur-[130px] pointer-events-none" />
+      {/* Cyber Neon Wave Graphic Background uploaded by user */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+        <div className="relative w-full h-full">
+          <Image
+            src="/images/footer-bg.png"
+            alt="Cyber Neon Footer Graphic"
+            fill
+            sizes="100vw"
+            className="object-cover object-bottom opacity-70 sm:opacity-85"
+            priority={false}
+          />
+          {/* Subtle gradient vignette to blend cleanly with top section and keep text crystal clear */}
+          <div className="absolute inset-0 bg-gradient-to-b from-theme-bg via-theme-bg/75 to-transparent" />
+        </div>
+      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-theme-border/60">
@@ -41,7 +54,7 @@ export default function Footer() {
               Specialized in enterprise backend engineering, C#, ASP.NET MVC, Web API, and SQL Server for mission-critical logistics, courier networks, and ERP workflows.
             </p>
 
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-theme-surface border border-teal-500/30 text-xs text-theme-textSecondary font-mono shadow-sm">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-theme-surface/80 backdrop-blur-md border border-teal-500/30 text-xs text-theme-textSecondary font-mono shadow-sm">
               <ShieldCheck className="w-4 h-4 text-teal-400" />
               <span>Grounded in authentic 3+ years enterprise experience</span>
             </div>
@@ -86,7 +99,7 @@ export default function Footer() {
                     href="https://wa.me/919451697870"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-2 py-0.5 rounded-md bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-[11px] font-bold hover:bg-emerald-500/25 transition-colors inline-flex items-center gap-1"
+                    className="px-2 py-0.5 rounded-md bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-[11px] font-bold hover:bg-emerald-500/30 transition-colors inline-flex items-center gap-1"
                   >
                     <MessageCircle className="w-3 h-3" />
                     <span>Chat</span>
@@ -131,7 +144,7 @@ export default function Footer() {
             <button
               onClick={scrollToTop}
               type="button"
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-theme-surface border border-teal-500/30 text-teal-300 hover:text-white hover:border-teal-400 hover:bg-teal-500/10 transition-all shadow-sm"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-theme-surface/90 backdrop-blur-md border border-teal-500/30 text-teal-300 hover:text-white hover:border-teal-400 hover:bg-teal-500/20 transition-all shadow-md shadow-teal-500/10 cursor-pointer"
             >
               <span>Back to Top</span>
               <ArrowUp className="w-3.5 h-3.5" />
